@@ -6,16 +6,16 @@ body {
 
 @font-face {
  font-family: "Lucky";
- src: url(HK/fonts/Lucky.woff2) format("woff2"),
-      url(HK/fonts/Lucky.woff) format("woff"),
-      url(HK/fonts/Lucky.otf) format("otf");
+ src: url(fonts/Lucky.woff2) format("woff2"),
+      url(fonts/Lucky.woff) format("woff"),
+      url(fonts/Lucky.otf) format("otf");
 }
 
 @font-face {
  font-family: "Avara";
- src: url(HK/fonts/Avara.woff2) format("woff2"),
-      url(HK/fonts/Avara.woff) format("woff"),
-      url(HK/fonts/Avara.otf) format("otf");
+ src: url(fonts/Avara.woff2) format("woff2"),
+      url(fonts/Avara.woff) format("woff"),
+      url(fonts/Avara.otf) format("otf");
 }
 
 marquee {
