@@ -1,0 +1,105 @@
+body {
+  background-color: #1DA071;
+  text-align: center;
+  overflow: hidden;
+}
+
+@font-face {
+ font-family: "Lucky";
+ src: url(HK/fonts/Lucky.woff2) format("woff2"),
+      url(HK/fonts/Lucky.woff) format("woff"),
+      url(HK/fonts/Lucky.otf) format("otf");
+}
+
+@font-face {
+ font-family: "Avara";
+ src: url(HK/fonts/Avara.woff2) format("woff2"),
+      url(HK/fonts/Avara.woff) format("woff"),
+      url(HK/fonts/Avara.otf) format("otf");
+}
+
+marquee {
+  background-color: black;
+  color: #1DA071;
+  font-family: "Avara", serif;
+  margin: 0;
+  padding: 0;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  left: 0;
+  font-size: 0.8rem;
+}
+
+.center {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+}
+
+
+h1 {
+ font-family: "Lucky", sans-serif;
+ font-size: 150px;
+ text-align: center;
+ margin-top: 5%;
+}
+
+h3 {
+ font-family: "Avara", serif;
+ text-align: center;
+ font-size: 20px;
+}
+
+p {
+ font-family: "Avara", serif;
+}
+
+.nav-arrow {
+  position: fixed;
+  right: 3%;
+  bottom: 3%;
+}
+
+.nav-back {
+  position: fixed;
+  left: 3%;
+  bottom: 3%;
+}
+
+/* hr {
+  border: 1px solid black;
+  position: fixed;
+  bottom: 7%;
+  width: 100vw;
+  left: 0;
+} */
+
+.page-num {
+  position: fixed; 
+  bottom: 2%; 
+  margin: 0 auto;
+  left: 50%;
+}
+
+::selection {
+  /* Change highlight background color to black */
+  background: #000000;
+  /* Change highlight text color to green */
+  color: #1DA071;
+  }
+
+.footer {
+  background-color: #1DA071;
+  position: fixed;
+  height: 8%;
+  min-width: 100%;
+  bottom: 0;
+  left: 0;
+  border-top-width: 2px;
+  border-top-style: solid;
+  border-top-color: #000000;
+}
+

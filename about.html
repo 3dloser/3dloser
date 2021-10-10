@@ -17,123 +17,149 @@
     
 <style>
 p {
-    font-size: 1em;
+    font-size: 1.8em;
     margin-bottom: 2%;
 }
-li {
-    font-size: 0.8em;
-    color: #333333;
+
+.item p {
+  font-size: 1rem;
+  padding-top: 0;
 }
-.column {
-    -ms-flex: 24%; /* IE10 */
-    flex: 24%;
-    max-width: 24%;
-    padding: 0 4px;
-}
-.intro {
-    -ms-flex: 58%; /* IE10 */
-    flex: 58%;
-    max-width: 58%;
-    padding: 0 4px;
-}
-.intro p {
-    font-size: 0.8em;
-}
-	
-#intro-text {
-	margin-left: 5%;
-	margin-right: 5%;
+
+.item {
+  padding-bottom: 1%;
 }
     
-#who {
-    color: black;
-/*    font-weight: 700;*/
-    font-family: 'Open Sans', sans-serif;
-    font-size: 3em;
-    line-height: 1em;
-}
-	
-.me {
-    -ms-flex: 40%; /* IE10 */
-    flex: 40%;
-    max-width: 40%;
-    padding: 0 4px;
-	padding-top: 10%;
-}
-#things-title {
-    margin-bottom: 2%;
-    font-family: 'Open Sans', sans-serif;
-    font-size: 2em;
-}
 .text-link {
     text-decoration: underline;
-    color: #FF4D00;
+    color: #40BE14;
 }
 a.text-link, a.text-link:hover, a.text-link:visited {
     text-decoration: underline;
-    color: #FF4D00;
+    color: #40BE14;
 }
-ul {
-	margin-left: 4%;
+
+.caption {
+  margin-top: 0;
+  padding-top: 0;
+  margin-bottom: 2%;
 }
+
 </style>
 </head>
 
-<body>
-<div class="header"> <a href="index.html" class="logo">Tina Zhou</a>
-  <div class="header-menu"> <a href="works.html">Work</a> <a href="about.html" class="active">About</a> <a href="contact.html">Contact</a> </div>
-</div>
-<div class="row">
-  <div class="me">
-    <div class="img-container"> <img src="me.png" style="width: 100%"> </div>
-  </div>
-  <!--end col 1-->
+<body class="page-container">
+<!--  nav  -->
+<ul class="header" style="list-style: none; font-size: 0.5rem; padding-bottom: 2%;">
+  <li><a href="contact.html"><span class="word">Contact</span></a></li>
+  <li><a href="about.html"><span class="word">About</span></a></li>
+  <li><a href="marmite/index.html"><span class="word">Play</span></a></li>
+  <li><a href="work.html"><span class="word">Work</span></a></li>
+  <li style="float:left"><a href="index.html"><span class="word" style="padding-left: 0;">Tina &#8287 Zhou</span></a></li>
+</ul>
   
-  <div class="intro">
-    <div id="intro-text"> <br>
-      <br>
-      <ul>
-        <li id="who">Hi!</li>
-          <br><br><br>
-        <li>I am a 21-year-old senior in New York University majoring in studio art and minoring in web programming + applications.</li>
-        <br>
-        <li>I was born and raised in New Zealand, then lived in China for eight years, England for two, and am currently a transplant in New York City.</li>
-        <br>
-        <li>In my spare time I partake in generic human hobbies such as listening to <a href="music.html" class="text-link">music</a> and watching <a href="movies.html" class="text-link">movies</a>. I'm an avid Citibiker and <a href="bread.html" class="text-link">bread eater</a>, and I enjoy making prolonged eye contact with dogs I see on the street.</li>
-      </ul>
-      <p>I have worked with everything from graphic design and wireframing to front end web development and UI/UX, and I'm always looking to gain more experience. You can download my resume <a href="resume.pdf" class="text-link" target="_blank">here</a> :)</p>
-    </div>
-  </div>
-</div>
+  <p>
+        I am a 22-year-old who was born and raised in New Zealand, then lived in China for eight years, England for two, and am currently a transplant in New York City.
+        <br><br>
+        In my spare time I partake in generic human hobbies such as listening to <span id="music"><span class="wavy">music </span><img id="music-pic" width="40%" style="" src="things/Music.png"/></span>and watching <span id="movies"><span class="wavy">movies.<img id="bread-pic" width="50%" style="" src="things/Movies.png"/></span></span> 
+        I'm an avid Citibiker and <span id="bread"><span class="wavy">bread eater</span><img id="bread-pic" width="30%" style="" src="things/Bread.png"/></span> who enjoys making prolonged eye contact with dogs on the street.
+        Looking for my resume? You can download it <a href="resume.pdf" class="text-link" target="_blank">here</a>.
+</p>
     
 <p id="things-title">other random things I've been into lately:</p>
 <div class="row">
   <div class="column">
-	  <div class="img-container"> <a href="https://www.instagram.com/p/CHYrJO-ACUx/?utm_source=ig_web_copy_link"> <img src="things/4.png" style="width: 100%"> </a> </div>   
-	 <div class="img-container"> <a href="https://www.hulu.com/series/pen15-8c87035d-2b10-4b10-a233-ca5b3597145d" target="_blank"> <img src="things/3.jpg" style="width: 100%"> </a> </div>
-	  <div class="img-container"> <a href="https://open.spotify.com/album/2kCDZ3gCr5hXFgbFsPMcxP?si=XtrMUGU5RjS3IupUTIzV5w"> <img src="things/11.jpg" style="width: 100%"> </a> </div>
+	  
+    <div class="item">
+      <a href="https://store.steampowered.com/app/632470/Disco_Elysium__The_Final_Cut/" target="_blank"> 
+      <img width="100%" src="things/11.webp" style="width: 100%"/>
+    </a>
+      <p class="caption">A game that does, in fact, live up to its reputation</p>
+    </div>
+
+    <div class="item">
+      <a href="https://www.instagram.com/p/CHYrJO-ACUx/?utm_source=ig_web_copy_link" target="_blank"> 
+      <img width="100%" src="things/4.png" style="width: 100%"/>
+    </a>
+      <p class="caption">Ikea Cabinet Greenhouses!</p>
+    </div>
+
+    <div class="item">
+      <a href="https://www.instagram.com/p/CHyTGQ6FDrq/?utm_source=ig_web_copy_link" target="_blank"> 
+      <img width="100%" src="things/2.png" style="width: 100%"/>
+    </a>
+      <p class="caption">Pretty cakes by @dreamcaketestkitchen</p>
+    </div>
+ 
 	</div>
   <!--end .column 1-->
   
   <div class="column">
-	  <div class="img-container"> <a href="http://eros.110west40th.com/" target="_blank"> <img src="things/5.jpg" style="width: 100%"> </a> </div>
-    <div class="img-container"> <a href="https://www.instagram.com/p/CHyTGQ6FDrq/?utm_source=ig_web_copy_link" target="_blank"> <img src="things/2.png" style="width: 100%"> </a> </div>
-    <div class="img-container"><a href="https://joythebaker.com/2014/05/the-best-brown-butter-chocolate-chip-cookies/"><img src="things/7.jpg" style="width: 100%"> </a> </div>
+	  <div class="item">
+      <img width="100%" src="things/1.jpg" style="width: 100%"/>
+      <p class="caption">My dog. She is cute</p>
+    </div>
     
+    <div class="item">
+      <img width="100%" src="things/5.JPG" style="width: 100%"/>
+      <p class="caption">It's duckling season. Need I say more?</p>
+    </div>
+    
+    <div class="item">
+        <a href="https://www.youtube.com/watch?v=5ibj87fwRaM" target="_blank"> 
+        <img width="100%" src="things/10.jpeg" style="width: 100%"/>
+      </a>
+        <p class="caption">Iconic</p>
+      </div>
   </div>
   <!--end .column 2-->
   
   <div class="column">
-    <div class="img-container"> <a href="https://open.spotify.com/album/4Pj4zPHuEUPtfacdeTlqUG?si=X3YbOJCUTMG2owpU8BVVXQ" target="_blank"> <img src="things/9.jpg" style="width: 100%"> </a> </div>
-    <div class="img-container"> <a href="https://open.spotify.com/album/2xECuqnvvmVktV7UO8Dd3s?si=9YeIIpslSVC-GIaTbVD1ywhttps://open.spotify.com/track/7yR6GEJsPI6kmNRvFkPuN3?si=oYWiNi29QIaykQLNKrxo-Q" target="_blank"> <img src="things/8.jpg" style="width: 100%"> </a> </div>
-	  <div class="img-container"> <a href="https://www.fxnetworks.com/shows/what-we-do-in-the-shadows" target="_blank"> <img src="things/6.jpg" style="width: 100%"> </a> </div>
+
+    <div class="item">
+      <a href="https://open.spotify.com/album/4Pj4zPHuEUPtfacdeTlqUG?si=X3YbOJCUTMG2owpU8BVVXQ" target="_blank"> 
+      <img width="100%" src="things/9.jpg" style="width: 100%"/>
+    </a>
+      <p class="caption">This album...makes my day every time</p>
+    </div>
+
+    <div class="item">
+      <a href="https://www.doc.govt.nz/nature/native-animals/birds/birds-a-z/nz-pigeon-kereru/" target="_blank"> 
+      <img width="100%" src="things/8.jpeg" style="width: 100%"/>
+    </a>
+      <p class="caption">Kererus, aka New Zealand pigeons. They plump</p>
+    </div>
+
+    <div class="item">
+      <img width="100%" src="things/3.jpg" style="width: 100%"/>
+      <p class="caption">Bees. They are magnificent</p>
+    </div>
+   
   </div>
   <!--end .column 3-->
   
   <div class="column">
-	<div class="img-container"> <a href="https://www.netflix.com/title/80116921" target="_blank"> <img src="things/12.jpg" style="width: 100%"> </a> </div>
-    <div class="img-container"> <a href="https://www.thegentlemen.movie/"><img src="things/1.jpg" style="width: 100%"></a> </div>
-    <div class="img-container"> <a href="https://boysmells.com/products/les?_pos=1&_sid=f6e3108ff&_ss=r" target="_blank"> <img src="things/10.png" style="width: 100%"> </a> </div>
+    <div class="item">
+      <a href="https://www.goodreads.com/book/show/27833670-dark-matter" target="_blank"> 
+      <img width="100%" src="things/6.jpg" style="width: 100%"/>
+    </a>
+      <p class="caption">So good!</p>
+    </div>
+
+
+    <div class="item">
+      <a href="https://10play.com.au/masterchef" target="_blank"> 
+      <img width="100%" src="things/7.jpg" style="width: 100%"/>
+    </a>
+      <p class="caption">Perhaps the best show ever created in human history</p>
+    </div>
+
+    <div class="item">
+      <a href="https://lewisroadcreamery.co.nz/products/jersey-milk-homogenised" target="_blank"> 
+      <img width="100%" src="things/12.png" style="width: 100%"/>
+    </a>
+      <p class="caption">Jersey milk (no it is NOT related to New Jersey)</p>
+    </div>
   </div>
   <!--end .column 4--> 
   <br>
@@ -141,4 +167,8 @@ ul {
 <!--end .row-->
 
 </body>
+    
+    <!--  letters tilt  -->
+<script src="other.js"></script>
+    
 </html>

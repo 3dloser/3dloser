@@ -4,188 +4,92 @@
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-	
+
 <!--title-->
 <title>Tina Zhou</title>
-	
+
 <!--icon-->
 <link rel="icon" href="../images/logo.png">
 
 <!-- stylesheet -->
 <link rel="stylesheet" href="../style.css">
-<link href="https://fonts.googleapis.com/css?family=Ubuntu+Mono" rel="stylesheet">
-	
-	<style>
-	/* 3 columns */
-		.column {
-			-ms-flex: 20%; /* IE10 */
-			flex: 20%;
-			max-width: 20%;
-			padding: 0px;
-		}
-		
-		p {
-			font-size: 1em;
-		}
-		
-		p a {
-			text-decoration: underline;
-			color: #FF4D00;
-		}
-		
-		p a:hover, a:visited {
-			text-decoration: underline;
-			color: #FF4D00;
-		}
-		
-		.h1 {
-			margin-bottom: 0;
-		}
-		
-		/*----------------------------------slideshow------------------------------*/
-		* {
-			box-sizing: border-box;
-		}
 
-		/* Slideshow container */
-		.slideshow-container {
-		  max-width: 1000px;
-		  position: relative;
-		  margin: auto;
-		}
+<!-- font -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@1,300&display=swap" rel="stylesheet">
 
-		/* Hide the images by default */
-		.mySlides {
-			display: none;
-		}
 
-		/* Next & previous buttons */
-		.prev, .next {
-		  cursor: pointer;
-		  position: absolute;
-		  top: 50%;
-		  width: auto;
-		  margin-top: -22px;
-		  padding: 16px;
-		  color: white;
-		  font-weight: bold;
-		  font-size: 18px;
-		  transition: 0.6s ease;
-		  border-radius: 0 3px 3px 0;
-		}
+<style>
 
-		/* Position the "next button" to the right */
-		.next {
-		  right: 0;
-		  border-radius: 3px 0 0 3px;
-		}
+* {
+  box-sizing: border-box;
+}
 
-		/* On hover, add a black background color with a little bit see-through */
-		.prev:hover, .next:hover {
-		  background-color: rgba(0,0,0,0.8);
-		}
+  .header {
+    padding-bottom: 2%;
+  }
 
-		/* Fading animation */
-		.fade {
-		  -webkit-animation-name: fade;
-		  -webkit-animation-duration: 1.5s;
-		  animation-name: fade;
-		  animation-duration: 1.5s;
-		}
+  .column-home {
+    margin: 0;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
 
-		@-webkit-keyframes fade {
-		  from {opacity: .4} 
-		  to {opacity: 1}
-		}
-
-		@keyframes fade {
-		  from {opacity: .4} 
-		  to {opacity: 1}
-		}
-		
-	</style>
+  .about-body a {
+    color: #40BE14;
+    text-decoration: underline;
+  }
+  
+  
+</style>
 </head>
-	
-<body>
-	
-<div class="header">
-  <a href="../index.html" class="logo">Tina Zhou</a>
-  <div class="header-menu">
-    <a href="../works.html" class="active">Work</a>
-	<a href="../about.html">About</a>
-    <a href="../contact.html">Contact</a>
+
+<body class="page-container">
+
+<!--  nav  -->
+<div>
+<ul class="header" style="list-style: none; font-size: 0.5rem;">
+  <li><a href="../contact.html"><span class="word">Contact</span></a></li>
+  <li><a href="../about.html"><span class="word">About</span></a></li>
+  <li><a href="../marmite/index.html"><span class="word">Play</span></a></li>
+  <li><a href="../work.html"><span class="word">Work</span></a></li>
+  <li style="float:left"><a href="../index.html"><span class="word" style="padding-left: 0;">Tina &#8287 Zhou</span></a></li>
+</ul>
+</div>
+
+<!--  body  -->
+<img src="../images/games/moonchella.png" width="100%"/> 
+<div class="row-title">
+  <div class="column-title">
+    <p class="work-title">Race to Moonchella / 2018</p>
+  </div>
+  <div class="column-title">
+    <p class="role">Game Design</p> 
   </div>
 </div>
-	
-	<div class="row"> 
-		
-	<!-- Slideshow container -->
-<div class="slideshow-container">
 
-  <div class="mySlides fade">
-    <img src="../images/games/moonchella.png" style="width:100%">
+<div class="row-about">
+  <div class="column-about left-about">
+    <h2>About</h2>
   </div>
-	
-  <div class="mySlides fade">
-    <img src="../images/games/moon/1.png" style="width:100%">
+  <div class="column-about right-about">
+    <p class="about-body">
+      Race to Moonchella is a game I coded with <a href="https://www.katvlasova.com/">Kat Vlasova</a> and Junyang Ma using the P5.js framework. 
+      I designed the sets, characters as well as the overall interface.
+    <br><br>
+In this game, you control characters such as Father John Misty and Lil Pump, and your goal is to help them get dressed while dodging various obstacles so they can make it to Coachella 2020 on the moon.
+    </p>
   </div>
-
-  <div class="mySlides fade">
-    <img src="../images/games/moon/2.png" style="width:100%">
-  </div>
-
-  <div class="mySlides fade">
-    <img src="../images/games/moon/3.png" style="width:100%">
-  </div>
-	
-  <div class="mySlides fade">
-    <img src="../images/games/moon/4.png" style="width:100%">
-  </div>
-
-  <!-- Next and previous buttons -->
-  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-  <a class="next" onclick="plusSlides(1)">&#10095;</a>
 </div>
-<br>
-		
-</div><!--end .row-->
-	
-	<p class="h1">Race to Moonchella</p>
-	<p>Click <a href="http://i6.cims.nyu.edu/~ev775/interactive/Midterm_Final_Version/index.html">here</a> to enter the game!<br><br>This is a game I coded with <a href="https://www.katvlasova.com/" target="_blank">Kat Vlasova</a> and Junyang Ma using the <a href="https://p5js.org/" target="_blank">P5</a> framework. I designed the sets, characters as well as the overall interface.<br><br>In this game, you control characters such as Father John Misty and Lil Pump, and your goal is to help them get dressed while dodging various obstacles so they can make it to Coachella 2020 on the moon (sponsered by Elon Musk)(Coachella 2020, not this game)(Although Elon if you are reading this I guess it would be cool if you sponser us thanks). </p>
 
-<script>
-	var slideIndex = 1;
-	showSlides(slideIndex);
-
-	// Next/previous controls
-	function plusSlides(n) {
-	  showSlides(slideIndex += n);
-	}
-
-	// Thumbnail image controls
-	function currentSlide(n) {
-	  showSlides(slideIndex = n);
-	}
-
-	function showSlides(n) {
-	  var i;
-	  var slides = document.getElementsByClassName("mySlides");
-	  var dots = document.getElementsByClassName("dot");
-	  if (n > slides.length) {
-		  slideIndex = 1;
-	  } 
-	  if (n < 1) {
-		  slideIndex = slides.length;
-	  }
-	  for (i = 0; i < slides.length; i++) {
-		  slides[i].style.display = "none"; 
-	  }
-	  for (i = 0; i < dots.length; i++) {
-		  dots[i].className = dots[i].className.replace(" active", "");
-	  }
-	  slides[slideIndex-1].style.display = "block"; 
-	  dots[slideIndex-1].className += " active";
-	}
-</script>
-</body>
-</html>
+<div class="row-home">
+  <div class="column-home" style="padding-right:7px;">
+    <img src="../images/games/moon/1.png" width="100%">
+    <img src="../images/games/moon/2.png" width="100%" style="padding-top: 10px;">
+  </div>
+  <div class="column-home" style="padding-left:7px;">
+    <img src="../images/games/moon/3.png" width="100%">
+    <img src="../images/games/moon/4.png" width="100%" style="padding-top: 10px;">
+  </div>
+</div>

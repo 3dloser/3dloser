@@ -16,20 +16,22 @@
 
 <style>
 	
-	p {
-		font-size: 1em;
-	}
-	
 	.text-link {
 		text-decoration: underline;
-		color: #FF4D00;
+		color: #40BE14;
 	}
 	
 	a.text-link, a.text-link:hover, a.text-link:visited {
 		text-decoration: underline;
-		color: #FF4D00;
+		color: #40BE14;
 	}
 	
+	#list {
+		list-style-type: circle;
+		font-size: 1.8rem;
+		margin-left: 7%;
+	}
+
 	#contact {
 		margin-top: 5%;
 	}
@@ -37,16 +39,41 @@
 </style>
 </head>
 	
-<body>
-	
-<div class="header">
-  <a href="index.html" class="logo">Tina Zhou</a>
-  <div class="header-menu">
-    <a href="works.html">Work</a>
-	<a href="about.html">About</a>
-    <a href="contact.html" class="active">Contact</a>
-  </div>
-</div>
-	<p id="contact">Found a typo? Saw a <a href="https://www.youtube.com/watch?v=l7op92W7voE&ab_channel=BenMesches" target="_blank" class="text-link">dog video</a> on Facebook that you desperately want to show someone? Have a spare hour and feel like listening to me explain in detail why American biscuits are actually scones and cookies are actually biscuits? <b><i>Business Inquiries? </i></b> Email me at <a href="mailto:name@email.com" class="text-link">tinazhou@nyu.edu</a>.</p>
+<body class="page-container">
+
+	<!--  nav  -->
+	<ul class="header" style="list-style: none; font-size: 0.5rem;">
+	  <li><a href="contact.html"><span class="word">Contact</span></a></li>
+	  <li><a href="about.html"><span class="word">About</span></a></li>
+	  <li><a href="marmite/index.html"><span class="word">Play</span></a></li>
+	  <li><a href="work.html"><span class="word">Work</span></a></li>
+	  <li style="float:left"><a href="index.html"><span class="word" style="padding-left: 0;">Tina &#8287 Zhou</span></a></li>
+	</ul>
+
+    <p id="contact" style="margin-bottom: 2%;">
+		Here are some things we could talk about should you wish to contact me. 
+		
+		<ul id="list">
+			<li>• My work</li>
+			<li>• My greatest strengths and weaknesses, how I handle conflict, and where I see myself
+				in the next five to ten years
+			</li>
+			<li>• The one time I finished a NYT mini crossword puzzle under a minute (I don't have a screenshot 
+				but it happened I swear)
+			</li>
+			<li>• New Zealand endemic birds</li>
+			<li>• How I made peking duck at home over the span of three days (it was 85% successful)</li>
+			<li>• Orange cats</li>
+			<li>• Honestly anything I'm a pretty good listener</li>
+		</ul>
+		
+	<p style="text-align: left;">
+		Email me at <a href="mailto:name@email.com" class="text-link">tinazhou@nyu.edu</a>.
+	</p>
+
 </body>
+    
+    <!--  letters tilt  -->
+<script src="other.js"></script>
+    
 </html>

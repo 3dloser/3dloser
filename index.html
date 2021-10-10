@@ -4,16 +4,16 @@
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-	
+
 <!--title-->
 <title>Tina Zhou</title>
-	
+
 <!--icon-->
 <link rel="icon" href="images/logo.png">
 
 <!-- stylesheet -->
 <link rel="stylesheet" href="style.css">
-	
+
 <!--p5-->
 <script src="p5/p5.min.js"></script>
 <script src="p5/addons/p5.dom.min.js"></script>
@@ -21,24 +21,66 @@
 <script src="sketch.js"></script>
 
 <style>
-	.red {
-		color:#FF4D00;
-	}	
-	
+
+  body {
+    overflow: scroll;
+  }
+  
+  .row-home {
+    display: flex;
+  }
+  
+  .column-home {
+    flex: 50%;
+  }
+
+  @media screen and (max-width: 1000px) {
+    .column-home {
+      width: 100%;
+    }
+  }
+
+  p {
+    margin: 0;
+  }
+
+  .header {
+    padding-bottom: 10%;
+  } 
+     
 </style>
 </head>
-	
-<body>
-	
-<div class="header">
-  <a href="index.html" class="logo">Tina Zhou</a>
-  <div class="header-menu">
-    <a href="works.html">Work</a>
-	<a href="about.html">About</a>
-    <a href="contact.html">Contact</a>
+
+<body class="page-container">
+
+<!--  nav  -->
+<ul class="header" style="list-style: none; font-size: 0.6rem;">
+  <li><a href="contact.html"><span class="word">Contact</span></a></li>
+  <li><a href="about.html"><span class="word">About</span></a></li>
+  <li><a href="marmite/index.html"><span class="word">Play</span></a></li>
+  <li><a href="work.html"><span class="word">Work</span></a></li>
+  <li style="float:left"><a href="index.html"><span class="word" style="padding-left: 0;">Tina &#8287 Zhou</span></a></li>
+</ul>
+
+<!--  body  -->
+<div class="row-home">
+  <div class="column-home">
+    <p style="padding: 0 5%;" id="tina">
+      I'm an <a href="work.html"><span class="wavy">Interdisciplinary Designer</span></a><br> who codes (on a good day)
+      <img id="tina-pic" width="70%" style="padding-top: 10%;" src="images/tina.gif"/>
+    </p>
+  </div>
+
+  <div class="column-home">
+    <p style="position: absolute; bottom: 15%; padding: 0 5%;" id="nz">
+      <img id="nz-pic" width="60%" style="padding-bottom: 10%;" src="images/nz.JPG"/>
+      I'm from <span class="wavy">Auckland, New Zealand</span> 
+      & have been living in NYC for the past 5 years.</p>
   </div>
 </div>
-	<p>I'm an:<br> 
-		1. <span class="red">artist</span>, <br> 2. <span class="red">illustrator</span>, and <br>3. <span class="red">designer who likes to code</span>. <br>I'm from <a href="home.html" style="text-decoration: underline; color: #FF4D00">Auckland</a>, New Zealand and I'm currently living in New York.</p>
 </body>
+    
+<!--  letters tilt  -->
+<script src="other.js"></script>
+    
 </html>

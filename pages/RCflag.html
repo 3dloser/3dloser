@@ -4,84 +4,101 @@
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-	
+
 <!--title-->
 <title>Tina Zhou</title>
-	
+
 <!--icon-->
 <link rel="icon" href="../images/logo.png">
 
 <!-- stylesheet -->
 <link rel="stylesheet" href="../style.css">
-<link href="https://fonts.googleapis.com/css?family=Ubuntu+Mono" rel="stylesheet">
-	
-	<style>
-	/* 3 columns */
-		.column {
-			-ms-flex: 99.5%; /* IE10 */
-			flex: 99.5%;
-			max-width: 99%;
-			padding: 0 4px;
-		}
-		
-		p {
-			font-size: 1em;
-		}
-		
-		p a {
-			text-decoration: underline;
-			color: #FF4D00;
-		}
-		
-		p a:hover, a:visited {
-			text-decoration: underline;
-			color: #FF4D00;
-		}
-		
-		.h1 {
-			margin-bottom: 0;
-		}
-		
-	</style>
+
+<!-- font -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@1,300&display=swap" rel="stylesheet">
+
+
+<style>
+
+* {
+  box-sizing: border-box;
+}
+
+  .header {
+    padding-bottom: 2%;
+  }
+
+  .column-home {
+    margin: 0;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  .about-body a {
+    color: #40BE14;
+    text-decoration: underline;
+  }
+  
+  
+</style>
 </head>
-	
-<body>
-	
-<div class="header">
-  <a href="../index.html" class="logo">Tina Zhou</a>
-  <div class="header-menu">
-    <a href="../works.html" class="active">Work</a>
-	<a href="../about.html">About</a>
-    <a href="../contact.html">Contact</a>
+
+<body class="page-container">
+
+<!--  nav  -->
+<div>
+<ul class="header" style="list-style: none; font-size: 0.5rem;">
+  <li><a href="../contact.html"><span class="word">Contact</span></a></li>
+  <li><a href="../about.html"><span class="word">About</span></a></li>
+  <li><a href="../marmite/index.html"><span class="word">Play</span></a></li>
+  <li><a href="../work.html"><span class="word">Work</span></a></li>
+  <li style="float:left"><a href="../index.html"><span class="word" style="padding-left: 0;">Tina &#8287 Zhou</span></a></li>
+</ul>
+</div>
+
+<!--  body  -->
+<img src="../images/design/Rockefeller/nyc-flag.jpg" width="100%"/> 
+<div class="row-title">
+  <div class="column-title">
+    <p class="work-title">The Flag Project for Rockefeller Plaza</p>
+  </div>
+  <div class="column-title">
+    <p class="role">Illustration</p> 
   </div>
 </div>
-		
-<div class="row"> 
-	<div class="column">
-		<div class="img-container" align="center">
-			<img src="../images/design/nyc-flag.jpg" style="width: 50%" class="cover-image">
-		</div>
-  </div> <!--end .column-->
-   <br>
-</div><!--end .row-->
+
+<div class="row-about">
+  <div class="column-about left-about">
+    <h2>About</h2>
+  </div>
+  <div class="column-about right-about">
+    <p class="about-body">
+      <a href="https://www.rockefellercenter.com/events/the-flag-project/">The Flag Project</a> was a public installation at the Rockefeller Center from February to April 2021 to celebrate NYC's resilience in the midst of the COVID pandemic.
+      It featured 193 flags designed by artists and everyday people from around the country, and luckily I was selected to be a part of this project. This flag consists of little doodles encapsulating my corner of NYC, which, yes, is painfully below-14th-street.
+      </p>
+  </div>
+</div>
+
+<div class="row-about-pic">
+  <div class="column-about-pic left-about-pic">
+    <img src="../images/design/Rockefeller/nyc-flag2.jpg" width="100%">
+    <p class="about-body" style="margin-top: 5%;">
+      Now, I wish I could have a glorious, majestic picture of my lil flag wavering in the wind...but let's just say Rockefeller Plaza is less windy than one would imagine.
+     <br><br>
+     While I was trying to take a picture of the flag, someone thought I was about to vandalize it and called the cops—next thing I knew three scary-looking cops came up to interrogate me. At least it makes for a good story.
+    </p>
+  </div>
+  <div class="column-about-pic right-about-pic">
+    <img src="../images/design/Rockefeller/nyc-flag3.jpg" width="100%">
+  </div>
+</div>
+
+
+</body>
     
-	<p class="h1">Rockefeller Center Flag Project</p><br>
-    <p>My illustration was selected to be flown on the Rockerfeller Center Plaza as part of the Flag Project from Aug 1-16, 2020. The Flag Project was a campaign to celebrate NYC during the pandemic, and this lil flag encompasses the NYC that I know and love. I would have loved to have a pic of the flag flying in its full glory in the sky, but let's just say...the wind conditions during summer in NYC are really not ideal.</p>
-
-    <div class="row"> 
-	<div class="column">
-		<div class="img-container" align="center">
-			<img src="../images/design/nyc-flag2.jpg" style="width: 50%" class="cover-image">
-		</div>
-  </div> <!--end .column-->
-   <br>
-</div><!--end .row-->
-    <div class="row"> 
-	<div class="column">
-		<div class="img-container" align="center">
-			<img src="../images/design/nyc-flag3.jpg" style="width: 50%" class="cover-image">
-		</div>
-  </div> <!--end .column-->
-   <br>
-</div><!--end .row-->
-
+<!--  letters tilt  -->
+<script src="../other.js"></script>
+    
+</html>

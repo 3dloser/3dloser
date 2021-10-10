@@ -20,9 +20,9 @@ function setup() {
 function draw() {
 //	noStroke();
 	
-	r = random(0, 255);
-	g = random(0, 255);
-	b = random(0, 255);
+	r = random(131, 255);
+	g = random(131, 255);
+	b = random(131, 255);
 //	fill(r, g, b);
 //	ellipse(mouseX, mouseY, 5);
 	strokeWeight(5);
