@@ -22,22 +22,24 @@ body {
 }
 
 h1 {
-  font-family: 'Frames';
+  font-family: 'Druk';
   font-size: 18em;
   text-transform:uppercase;
-  color: #FFCBED;
+  color: #D33562;
+  letter-spacing: 10px;
   overflow: hidden;
   line-height: .8;
   text-align: left;
   margin-top: 0;
-  padding-top: 5%;
+  padding-top: 8%;
   margin-bottom: 0;
   padding-bottom: 0;
 }
 
 #hero {
   background-color: #980043;
-  padding-bottom: 8%;
+  padding-bottom: 0%;
+  padding-top: 2%;
   margin: 0;
 }
 
@@ -45,7 +47,8 @@ h2 {
   font-family: 'Frames';
   font-size: 6em;
   text-transform:uppercase;
-  color: #980043;
+  color: #D33562;
+  margin-top: 0;
 }
 
 .h2a {
@@ -54,10 +57,11 @@ h2 {
 }
 
 #container-1 {
-background-color: #FFCBED;
+background-color: #980043;
 padding: 5% 10%;
 text-align: left;
 margin: 0;
+padding-top: 0;
 }
 
 .p1 {
