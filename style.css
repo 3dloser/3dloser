@@ -1,16 +1,33 @@
-@font-face {
+/* @font-face {
     font-family: 'alte_haas_grotesk';
     src: url('fonts/ahg.woff2') format('woff2'),
          url('fonts/ahg.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 
+} */       
+
+@font-face {
+  font-family: 'Neue Haas Grotesk';
+  src: url('fonts/NHaasGroteskTXPro-55Rg.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Neue Haas Grotesk Italic';
+  src: url('fonts/NHaasGroteskTXPro-56It.woff') format('woff');
+  font-weight: normal;
 }
 
 body {
-	font-family: 'alte_haas_grotesk';
+	font-family: 'Neue Haas Grotesk';
 	background-color: #FFFCF3;
 	}
+
+  .italic {
+    font-family: 'Neue Haas Grotesk Italic';
+  }
 
 html {
   cursor: url('cursor.svg'), auto;
@@ -33,7 +50,7 @@ html {
 
     /*------header words tilt effect--------*/
 .word {
-	font-size: 3em;
+	font-size: 3.5em;
 }
 .word .up
 {
@@ -418,7 +435,15 @@ h2 {
 }
 
 .about-body {
-  font-size: 1rem;
+  font-size: 1.3rem;
+  line-height: 1.7rem;
 }
 
 /* about img (50/50) */
+
+.thumbnail-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: .3%;
+}
