@@ -138,10 +138,13 @@ title-animate:nth-child(3n) {
 #about-video {
     display: flex;
     justify-content: center;
-    /* position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%); */
+    background: conic-gradient(#FE5F02 90deg,
+    #00C241 90deg 180deg,
+    #FE5F02 180deg 270deg,
+    #00C241 270deg);
+background-repeat: repeat;
+background-size: 30px 30px;
+background-position: top left;
 }
 
 #kiwiburger-1995 {
@@ -766,6 +769,25 @@ h3 {
     animation: scrollUp 1s ease-out forwards;
   }
 
+  /* ================================ hei tiki ================================ */
+
+#hei-tiki {
+    position: relative;
+    background-image: url('assets/kiwiana/heitiki/tiki_bg.png');
+    background-repeat: repeat;
+    background-size: 30%;
+    height: 800px;
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.img-hei-tiki {
+    position: absolute;
+}
+
   /* ================================ final block ================================ */
 
 #final-block {
@@ -781,6 +803,7 @@ h3 {
     /* font-family: 'Courier New', Courier, monospace; */
     color: #FFE100;
     /* padding: 2rem 5rem; */
+    padding-bottom: 50px;
 }
 
 #final-block p {
@@ -791,7 +814,7 @@ h3 {
 #final-block .p2 {
     font-size: 1rem;
     padding-top: 0rem;
-    line-height: 1rem;
+    line-height: 1.2rem;
 }
 
 .col-1 {
