@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kiwiana World</title>
+    <!-- import modelviewer -->
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.5.0/model-viewer.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="assets/kiwi-icon.png" />
+
+</head>
+
+<body>
+    <div class="body-container">
+
+        <button id="mute-button"></button>
+
+        <div class="hero-container">
+            <div class="kiwiana-title">
+                <h3 class="text-stroke bobbing">
+                    <!-- <span class="title-animate">K</span>
+                    <span class="title-animate">i</span>
+                    <span class="title-animate">w</span>
+                    <span class="title-animate">i</span>
+                    <span class="title-animate">a</span>
+                    <span class="title-animate">n</span>
+                    <span class="title-animate">a</span> -->
+                    “I am recreating
+                </h3>
+                <h3 class="delay-3 text-stroke bobbing">
+                    an idealised
+                </h3>
+                <h3 class="delay-6 text-stroke bobbing">
+                    New Zealand childhood
+                </h3>
+            </div>
+
+
+
+            <div class="kiwiana-title">
+                <h1>
+                    <!-- <span class="title-animate">W</span>
+                    <span class="title-animate">o</span>
+                    <span class="title-animate">r</span>
+                    <span class="title-animate">l</span>
+                    <span class="title-animate">d</span> -->
+
+                </h1>
+            </div>
+
+        </div>
+
+        <div class="model-container">
+            <!-- Multiple draggable 3D models -->
+            <!-- <div class="draggable">
+                <model-viewer src="assets/icecream/24_09_18_17_21_17_592.gltf" auto-rotate
+                    camera-controls></model-viewer>
+            </div> -->
+
+            <div class="draggable">
+                <model-viewer style="bottom: 10px; right: 40px; rotate: 40deg;"
+                    src="assets/buzzybee/24_09_26_01_00_14_407.gltf" auto-rotate camera-controls></model-viewer>
+            </div>
+
+            <div class="draggable">
+                <model-viewer style="bottom: 80px; left: 40px; rotate: -20deg;"
+                    src="assets/buzzybee/24_09_26_01_00_14_407.gltf" auto-rotate camera-controls></model-viewer>
+            </div>
+
+            <div class="draggable">
+                <model-viewer style="top: 0px; left: 50px; rotate: 65deg;"
+                    src="assets/buzzybee/24_09_26_01_00_14_407.gltf" auto-rotate camera-controls></model-viewer>
+            </div>
+
+            <div class="draggable">
+                <model-viewer style="top: 50px; left: 300px; rotate: 20deg;"
+                    src="assets/buzzybee/24_09_26_01_00_14_407.gltf" auto-rotate camera-controls></model-viewer>
+            </div>
+
+            <div class="draggable"></div>
+            <model-viewer style="bottom: 300px; right: 120px; rotate: -90deg;"
+                src="assets/buzzybee/24_09_26_01_00_14_407.gltf" auto-rotate camera-controls></model-viewer>
+        </div>
+        <!-- <div class="draggable" style="top: 0px; left: 20px; rotate: 110deg;">
+                <model-viewer src="assets/buzzybee/24_09_26_01_00_14_407.gltf" auto-rotate
+                    camera-controls></model-viewer>
+            </div>
+
+            <div class="draggable" style="top: 0px; right: 5px; rotate: 0deg;">
+                <model-viewer src="assets/buzzybee/24_09_26_01_00_14_407.gltf" auto-rotate
+                    camera-controls></model-viewer>
+            </div> -->
+
+    </div>
+
+    <div class="scroll-content">
+
+        <div id="about-title" class="text-stroke">
+            <h3 class="bobbing"> I wanted a 1950s place, and to fill it with 1950s things.
+            </h3>
+            <img src="assets/kiwiana/stamps/stamp-bee.png" alt="buzzy bee stamp" class="img-about"
+                style="top:40px; right:40px; rotate:10deg;">
+            <img src="assets/kiwiana/stamps/stamp-fish.png" alt="fish and chips stamp" class="img-about"
+                style="top:100px; left:100px; rotate:8deg;">
+            <img src="assets/kiwiana/stamps/stamp-jandals.png" alt="jandals stamp" class="img-about"
+                style="bottom:30px; left:100px; rotate:15deg;">
+            <img src="assets/kiwiana/stamps/stamp-kiwifruit.png" alt="kiwifruit stamp" class="img-about"
+                style="bottom:500px; left:500px; rotate:20deg;">
+            <img src="assets/kiwiana/stamps/stamp-paua.png" alt="paua stamp" class="img-about"
+                style="bottom:25px; right:30px; rotate:13deg;">
+            <img src="assets/kiwiana/stamps/stamp-rugby.png" alt="rugby stamp" class="img-about"
+                style="bottom:350px; right:100px; rotate:-10deg;">
+            <img src="assets/kiwiana/stamps/stamp-shirt.png" alt="flannel shirt stamp" class="img-about"
+                style="bottom:400px; left:600px; rotate:60deg;">
+            <img src="assets/kiwiana/stamps/stamp-singlet.png" alt="gumboots and singlet stamp" class="img-about"
+                style="top:400px; right:400px; rotate:-5deg;">
+        </div>
+
+        <div id="four-sq">
+            <img src="assets/kiwiana/foursquare/4s_card_1.png" alt="" class="img-4s" width="300px"
+                style="top:40px; right:40px; rotate:10deg;">
+            <img src="assets/kiwiana/foursquare/4s_card_2.png" alt="" class="img-4s" width="300px"
+                style="top:100px; left:40px; rotate:-10deg;">
+            <img src="assets/kiwiana/foursquare/4s_card_3.png" alt="" class="img-4s" width="300px"
+                style="top:500px; right:300px; rotate:-2deg;">
+            <img src="assets/kiwiana/foursquare/4s_card_4.png" alt="" class="img-4s" width="300px"
+                style="top:420px; left:400px; rotate:8deg;">
+
+            <img src="assets/kiwiana/foursquare/4s_fruit.png" alt="" class="img-4s" width="250px"
+                style="top:220px; right:560px; rotate:3deg;">
+
+            <img src="assets/kiwiana/foursquare/4s_4A.png" alt="" class="img-4s grow-shrink delay-2" width="100px"
+                style="top:780px; left:400px; rotate:-3deg;">
+            <img src="assets/kiwiana/foursquare/4s_4B.png" alt="" class="img-4s grow-shrink" width="100px"
+                style="top:560px; right:60px; rotate:-1deg;">
+            <img src="assets/kiwiana/foursquare/4s_4C.png" alt="" class="img-4s grow-shrink delay-1" width="100px"
+                style="top:420px; right:580px; rotate:14deg;">
+            <img src="assets/kiwiana/foursquare/4s_4D.png" alt="" class="img-4s grow-shrink delay-3" width="100px"
+                style="top:120px; left:660px; rotate:-7deg;">
+            <img src="assets/kiwiana/foursquare/4s_mascot.png" alt="" class="img-4s rotate-left-right" width="250px"
+                style="top:220px; left:360px; rotate:0deg;">
+
+            <h3 class="text-stroke">When I<br>go there,</h3>
+        </div>
+
+        <div id="watties">
+            <div class="watties-bg-layers">
+                <img src="assets/kiwiana/watties/watties_peas_1.png" width="100%" />
+                <img src="assets/kiwiana/watties/watties_bg_img.png" width="100%" />
+            </div>
+
+            <img src="assets/kiwiana/watties/watties_ketchup_1.png" alt="" class="img-watties bobbing delay-5"
+                width="200px" style="top:120px; left:150px;">
+            <img src="assets/kiwiana/watties/watties_ketchup_1.png" alt="" class="img-watties bobbing delay-2"
+                width="200px" style="top:120px; left:400px;">
+            <img src="assets/kiwiana/watties/watties_ketchup_1.png" alt="" class="img-watties bobbing" width="200px"
+                style="top:120px; left:650px;">
+
+            <img src="assets/kiwiana/watties/watties_beans_1.png" alt="" class="img-watties delay-2" width="300px"
+                style="top:800px; right:400px;">
+
+            <img src="assets/kiwiana/watties/watties_corn_1.png" alt="" class="img-watties bobbing delay-6"
+                width="150px" style="top:120px; right:200px;">
+            <img src="assets/kiwiana/watties/watties_rice_1.png" alt="" class="img-watties bobbing delay-3"
+                width="150px" style="top:120px; right:600px;">
+
+            <img src="assets/kiwiana/watties/watties_fries_1.png" alt="" class="img-watties spinning" width="600px"
+                style="top:700px; left:600px;">
+
+            <img src="assets/kiwiana/watties/watties_beans_2.png" alt="" class="img-watties bobbing delay-4"
+                width="170px" style="top:120px; right:400px;">
+
+            <img src="assets/kiwiana/watties/watties_spag_1.png" alt="" class="img-watties bobbing" width="450px"
+                style="top:400px; right:100px;">
+            <img src="assets/kiwiana/watties/watties_spag_2.png" alt="" class="img-watties bobbing" width="170px"
+                style="top:400px; right:600px;">
+
+            <img src="assets/kiwiana/watties/watties_ketchup_2.png" alt="" class="img-watties bobbing delay-2"
+                width="250px" style="top:800px; right:100px;">
+
+            <img src="assets/kiwiana/watties/watties_tomato_1.png" alt="" class="img-watties bobbing delay-1"
+                width="250px" style="top:800px; left:300px;">
+            <img src="assets/kiwiana/watties/watties_tomato_2.png" alt="" class="img-watties bouncing" width="200px"
+                style="top:1200px; left:500px;">
+
+            <h3 class="text-stroke" style="width: 100%;">it’s like<br>acting out <br>
+                a fantasy</h3>
+        </div>
+
+        <div id="buzzy-bee">
+            <div id="buzzy-top">
+
+                <img src="assets/kiwiana/buzzybee/buzzy_art_1.png" alt="" class="img-buzzy-bee mini-bobbing"
+                    width="400px" style="top:100px; left:100px;">
+                <img src="assets/kiwiana/buzzybee/buzzy_art_2.png" alt="" class="img-buzzy-bee mini-bobbing delay-5"
+                    width="250px" style="top:50px; left:570px;">
+                <img src="assets/kiwiana/buzzybee/buzzy_art_3.png" alt="" class="img-buzzy-bee mini-bobbing delay-1"
+                    width="350px" style="top:80px; left:900px;">
+                <img src="assets/kiwiana/buzzybee/buzzy_art_4.png" alt="" class="img-buzzy-bee mini-bobbing delay-6"
+                    width="250px" style="top:100px; left:1350px;">
+                <img src="assets/kiwiana/buzzybee/buzzy_art_5.png" alt="" class="img-buzzy-bee mini-bobbing"
+                    width="200px" style="bottom:50px; right:150px;">
+
+                <div id="buzzy-window">
+                    <img src="assets/kiwiana/buzzybee/sky.png" alt="" class="img-buzzy-bee" width="600px"
+                        style="bottom:50px; left:650px;">
+                    <img src="assets/kiwiana/buzzybee/buzzy.png" alt="" class="img-buzzy-bee grow-shrink" width="300px"
+                        style="bottom:150px; left:750px;">
+                    <img src="assets/kiwiana/buzzybee/window.gif" alt="" class="img-buzzy-bee" width="600px"
+                        style="bottom:50px; left:650px;">
+                </div>
+                <img src="assets/kiwiana/buzzybee/prince-williams.gif" alt="" class="img-buzzy-bee" width="600px"
+                    style="bottom:0px; left:150px;">
+                <img src="assets/kiwiana/buzzybee/buzzy_toy.png" alt="" class="img-buzzy-bee" width="400px"
+                    style="bottom:0px; left:520px;">
+            </div>
+
+
+            <div id="buzzy-bottom">
+                <h3 class="text-stroke">about family holidays there, decades ago.</h3>
+            </div>
+        </div>
+
+        <div id="hokey-pokey">
+
+            <h3 class="text-stroke">It’s like<br>I’ve bought myself<br>a national<br>back-story</h3>
+
+            <img src="assets/kiwiana/hokeypokey/hp_girl_1.png" alt="" class="img-hokey-pokey" width="450px"
+                style="top:300px; left:100px;" />
+            <img src="assets/kiwiana/hokeypokey/hp_container.png" alt="" class="img-hokey-pokey bobbing delay-3"
+                width="350px" style="top:100px; left:100px;" />
+            <img src="assets/kiwiana/hokeypokey/hp_sign.png" alt="" class="img-hokey-pokey blinking" width="350px"
+                style="bottom:100px; left:100px; rotate:-8deg;" />
+            <img src="assets/kiwiana/hokeypokey/hp_recipe.png" alt="" class="img-hokey-pokey" width="350px"
+                style="top:100px; left:500px;" />
+            <img src="assets/kiwiana/hokeypokey/hp_scoop.png" alt="" class="img-hokey-pokey mini-bobbing" width="350px"
+                style="top:100px; left:700px;" />
+            <img src="assets/kiwiana/hokeypokey/hp_girl_2.png" alt="" class="img-hokey-pokey grow-shrink" width="450px"
+                style="top:130px; right:200px;" />
+            <img src="assets/kiwiana/hokeypokey/hp_hand.png" alt="" class="img-hokey-pokey blinking delay-1"
+                width="250px" style="top:500px; right:0px;" />
+            <img src="assets/kiwiana/hokeypokey/hp_cone.png" alt="" class="img-hokey-pokey bobbing-2" width="200px"
+                style="top:100px; right:100px; rotate:16deg;" />
+            <img src="assets/kiwiana/hokeypokey/hp_wrapper.png" alt="" class="img-hokey-pokey" width="550px"
+                style="bottom:50px; right:200px;" />
+            <img src="assets/kiwiana/hokeypokey/hp_cone_2.png" alt="" class="img-hokey-pokey bobbing delay-2"
+                width="200px" style="bottom:50px; left:400px;" />
+
+            <img src="assets/kiwiana/hokeypokey/hp_choco_1.png" alt="" class="img-hokey-pokey" width="550px"
+                style="bottom:200px; left:600px;" />
+            <img src="assets/kiwiana/hokeypokey/hp_choco_2.png" alt="" class="img-hokey-pokey rotate-left-right"
+                width="250px" style="bottom:100px; left:600px;" />
+            <img src="assets/kiwiana/hokeypokey/hp_strawberry.png" alt="" class="img-hokey-pokey spinning" width="250px"
+                style="top:300px; right:600px;" />
+
+            <img src="assets/kiwiana/hokeypokey/sticker.gif" alt="" class="img-hokey-pokey" width="180px"
+                style="top:100px; right:500px; rotate: 10deg;" />
+        </div>
+
+        <div id="edmonds">
+
+            <img src="assets/kiwiana/edmonds/edmonds_cake.png" alt="" class="img-edmonds" width="350px"
+                style="top:220px; left:830px;" />
+
+            <h3 class="text-stroke">or autobiography<br>in material form.</h3>
+
+            <img src="assets/kiwiana/edmonds/edmonds_adpng.png" alt="" class="img-edmonds mini-bobbing" width="350px"
+                style="top:60px; right:530px;" />
+            <img src="assets/kiwiana/edmonds/edmonds_jelly.png" alt="" class="img-edmonds mini-bobbing delay-3"
+                width="450px" style="top:100px; left:120px;" />
+            <img src="assets/kiwiana/edmonds/edmonds_carnival.png" alt="" class="img-edmonds" width="220px"
+                style="bottom:300px; left:80px;" />
+            <img src="assets/kiwiana/edmonds/edmonds_recipe.png" alt="" class="img-edmonds" width="400px"
+                style="bottom:100px; left:200px;" />
+            <img src="assets/kiwiana/edmonds/edmonds_purity.png" alt="" class="img-edmonds mini-bobbing delay-1"
+                width="230px" style="bottom:90px; left:650px;" />
+            <img src="assets/kiwiana/edmonds/edmonds_dominion.png" alt="" class="img-edmonds grow-shrink" width="180px"
+                style="top:160px; left:700px;" />
+            <img src="assets/kiwiana/edmonds/edmonds_powder.png" alt="" class="img-edmonds rotate-left-right"
+                width="200px" style="bottom:500px; left:500px;" />
+            <img src="assets/kiwiana/edmonds/edmonds_house.png" alt="" class="img-edmonds" width="320px"
+                style="bottom:0px; right:600px;" />
+            <img src="assets/kiwiana/edmonds/edmonds_powder_2.png" alt="" class="img-edmonds bobbing" width="250px"
+                style="bottom:130px; right:350px;" />
+            <img src="assets/kiwiana/edmonds/edmonds_powder_3.png" alt="" class="img-edmonds" width="220px"
+                style="top:160px; right:220px;" />
+            <img src="assets/kiwiana/edmonds/edmonds_custard.png" alt="" class="img-edmonds flipping" width="90px"
+                style="top:560px; right:120px;" />
+        </div>
+
+        <div id="gumboot">
+
+            <h3 class="text-stroke">Whatever happens<br>in the future, </h3>
+
+            <img src="assets/kiwiana/sheep/boot_flyer.png" alt="" class="img-gumboot mini-bobbing delay-5" width="340px"
+                style="top:60px; left:80px;" />
+            <img src="assets/kiwiana/sheep/shearing_vintage.png" alt="" class="img-gumboot" width="560px"
+                style="top:220px; left:500px;" />
+            <img src="assets/kiwiana/sheep/shearing_3.png" alt="" class="img-gumboot mini-bobbing delay-4" width="200px"
+                style="top:10px; right:480px;" />
+
+            <img src="assets/kiwiana/sheep/boot_pukeko.png" alt="" class="img-gumboot rotate-left-right-3" width="300px"
+                style="top:80px; left:450px;" />
+            <img src="assets/kiwiana/sheep/boot_kiwi.png" alt="" class="img-gumboot grow-shrink" width="200px"
+                style="bottom:280px; left:600px;" />
+            <img src="assets/kiwiana/sheep/shearing_2.png" alt="" class="img-gumboot rotate-left-right-2" width="170px"
+                style="bottom:320px; left:1000px;" />
+            <img src="assets/kiwiana/sheep/boot_knitted.png" alt="" class="img-gumboot mini-bobbing" width="170px"
+                style="top:380px; right:570px;" />
+
+            <img src="assets/kiwiana/sheep/boot_pin.png" alt="" class="img-gumboot grow-shrink-2 delay-3" width="580px"
+                style="top:0px; right:0px;" />
+
+            <img src="assets/kiwiana/sheep/statue.png" alt="" class="img-gumboot" width="420px"
+                style="bottom:0px; right:0px;" />
+            <img src="assets/kiwiana/sheep/boot_2.png" alt="" class="img-gumboot bobbing delay-3" width="230px"
+                style="bottom:160px; right:220px;" />
+
+            <img src="assets/kiwiana/sheep/boot_flats.png" alt="" class="img-gumboot mini-bobbing delay-1" width="350px"
+                style="bottom:70px; right:650px;" />
+            <img src="assets/kiwiana/sheep/shearing.png" alt="" class="img-gumboot" width="450px"
+                style="bottom:30px; left:540px;" />
+
+            <img src="assets/kiwiana/sheep/boot_rouge.png" alt="" class="img-gumboot flipping" width="100px"
+                style="top:480px; left:80px;" />
+            <img src="assets/kiwiana/sheep/boot_sign.png" alt="" class="img-gumboot blinking" width="300px"
+                style="bottom:0px; left:130px;" />
+            <img src="assets/kiwiana/sheep/boot_duck.png" alt="" class="img-gumboot bobbing" width="160px"
+                style="bottom:150px; left:300px;" />
+        </div>
+
+        <div id="lemon-paeroa">
+
+            <img src="assets/kiwiana/lemonpaeroa/lp_1.gif" alt="" class="img-lemon-paeroa vid-mask-2" width="760px"
+                style="bottom:20px; right:150px;" />
+            <img src="assets/kiwiana/lemonpaeroa/lp_2.gif" alt="" class="img-lemon-paeroa vid-mask-2 grow-shrink-2"
+                width="560px" style="top:40px; left:500px;" />
+
+            <h3 class="text-stroke">it is<br>my own little world,</h3>
+
+            <img src="assets/kiwiana/lemonpaeroa/lp_combo.png" alt="" class="img-lemon-paeroa bobbing delay-3"
+                width="360px" style="top:50px; left:100px;" />
+            <img src="assets/kiwiana/lemonpaeroa/lp_macca.png" alt="" class="img-lemon-paeroa" width="520px"
+                style="bottom:0px; left:300px;" />
+            <img src="assets/kiwiana/lemonpaeroa/lp_georgie.png" alt="" class="img-lemon-paeroa bobbing-2 delay-3"
+                width="210px" style="bottom:120px; left:100px; rotate: 10deg;" />
+            <img src="assets/kiwiana/lemonpaeroa/lp_georgie_2.png" alt="" class="img-lemon-paeroa rotate-left-right-3"
+                width="320px" style="bottom:30px; right:400px; rotate: 10deg;" />
+
+            <img src="assets/kiwiana/lemonpaeroa/lp_statue.png" alt="" class="img-lemon-paeroa" width="480px"
+                style="top:30px; right:60px;" />
+            <img src="assets/kiwiana/lemonpaeroa/lp_bottle_1.png" alt=""
+                class="img-lemon-paeroa rotate-left-right delay-2" width="300px" style="top:30px; left:520px;" />
+            <img src="assets/kiwiana/lemonpaeroa/lp_pie.png" alt="" class="img-lemon-paeroa mini-bobbing" width="220px"
+                style="top:30px; right:420px; rotate: -15deg;" />
+
+            <img src="assets/kiwiana/lemonpaeroa/lp_bigBen_1.png" alt="" class="img-lemon-paeroa spinning" width="210px"
+                style="bottom:20px; right:600px;" />
+            <img src="assets/kiwiana/lemonpaeroa/lp_bigBen_2.png" alt="" class="img-lemon-paeroa bobbing delay-1"
+                width="130px" style="bottom:20px; right:100px; rotate: 5deg;" />
+
+            <img src="assets/kiwiana/lemonpaeroa/lp_sticker.png" alt="" class="img-lemon-paeroa mini-bobbing delay-4"
+                width="220px" style="top:290px; right:400px; rotate: 20deg;" />
+            <img src="assets/kiwiana/lemonpaeroa/lp_bottle_2.png" alt="" class="img-lemon-paeroa rotate-left-right"
+                width="500px" style="top:300px; right:60px;" />
+        </div>
+        <div id="collage">
+            <img src="assets/kiwiana/collage/center.png" alt="" class="img-collage grow-shrink-2" width="100%"
+                style="bottom: 0; left:0%;" />
+
+            <h3 class="text-stroke scroll-text" style="font-size: 6rem; line-height: 7rem;"><span>even
+                    though</span><br>it is modelled<br>on myths about<br>another world."</h3>
+
+            <img src="assets/kiwiana/collage/girl_1.png" alt="" class="img-collage bobbing" width="500px"
+                style="top:0px; left:0px;" />
+            <img src="assets/kiwiana/collage/girl_3.png" alt="" class="img-collage bobbing delay-1" width="500px"
+                style="bottom:100px; left:100px;" />
+            <img src="assets/kiwiana/collage/girl_2.png" alt="" class="img-collage bobbing delay-2" width="500px"
+                style="bottom:0px; left:0px;" />
+            <img src="assets/kiwiana/collage/girl_4.png" alt="" class="img-collage bobbing delay-3" width="500px"
+                style="bottom:0px; left:200px;" />
+
+            <img src="assets/kiwiana/collage/pakeha_1.png" alt="" class="img-collage bobbing delay-4" width="250px"
+                style="top:100px; right:200px;" />
+            <img src="assets/kiwiana/collage/pakeha_2.png" alt="" class="img-collage bobbing delay-5" height="100%"
+                style="top:0px; right:0px;" />
+            <img src="assets/kiwiana/collage/pakeha_3.png" alt="" class="img-collage bobbing delay-6" width="650px"
+                style="bottom:0px; right:0px;" />
+
+        </div>
+
+        <!-- <div id="about-video">
+                <video class="vid-mask" id="kiwiburger-1995"
+                    onclick="this.controls=0; this.paused || this.ended ? this.play() : this.pause();">
+                    <source src="assets/Kiwiburger_1995_cc.mp4" type="video/mp4" width="100%" height="100%">
+                    Your browser does not support the video tag.
+                </video>
+            </div> -->
+
+        <div id="final-block">
+            <div class="col-1">
+                <p>
+                    "I am re-creating an idealised New Zealand childhood.
+                    I wanted a 1950s place, and to fill it with 1950s things.
+                    When I go there it is like acting out a fantasy about family holidays there,
+                    decades ago. It’s like I’ve bought myself a national back-story
+                    or auto-biography in material form. Whatever happens in the future,
+                    it is my own little world, even though it is modelled on myths about another world,
+                    1950s New Zealand."
+                </p>
+                <p class="p2">
+                    Text excerpt from sociologist Dr Claudia Bell's interview with
+                    a kiwiana collector.
+                </p>
+            </div>
+            <div class="col-2">
+                <p>
+                    Kiwiana index
+                </p>
+                <p class="p2">
+                    1 Four Square: New Zealand's first supermarket and chain
+                </p>
+                    <hr>
+                    <p class="p2">
+                    2 Watties: New Zealand based packaged food company, famous for its slogan: "You'll always be a Kiwi, if you love our Wattie's Sauce"
+                    </p>
+                    <hr>
+                    <p class="p2">
+                    3 Buzzy bee: wooden toy that became popular in New Zealand during the post-war baby boom
+                </p>
+                    <hr>
+                    <p class="p2">
+                    4 Hokey Pokey ice cream: vanilla ice cream with lumps of honeycomb toffee
+                </p>
+                    <hr>
+                    <p class="p2">
+                    5 Edmonds: most known for its baking powder, has been described as synonymous with kiwi home cooking and baking
+                </p>
+                    <hr>
+                    <p class="p2">
+                    6 Gumboots: often worn by farmers when sheep shearing and conducting agricultural activities
+                </p>
+                    <hr>
+                    <p class="p2">
+                    7 L&P soft drink and meat pies: a popular food combo
+                </p>
+
+                <p class="p2" style="padding-top: 3rem;">
+                    Imagery in final block sourced from NZ tourism posters circa 1950s.
+                </p>
+           
+            </div>
+        </div>
+
+    </div>
+    <!-- end scroll content -->
+
+    </div>
+    <!-- end body container -->
+
+
+    <script>
+        // Make images draggable
+        $(document).ready(function () {
+            $('.img-about').draggable({
+                containment: '#about-title'
+            });
+
+            $('.img-4s').draggable({
+                containment: '#four-sq'
+            });
+
+            $('.img-watties').draggable({
+                containment: '#watties'
+            });
+
+            $('.img-buzzy-bee').draggable({
+                containment: '#buzzy-bee'
+            });
+
+            $('.img-hokey-pokey').draggable({
+                containment: '#hokey-pokey'
+            });
+
+            $('.img-edmonds').draggable({
+                containment: '#edmonds'
+            });
+
+            $('.img-gumboot').draggable({
+                containment: '#gumboot'
+            });
+
+            $('.img-lemon-paeroa').draggable({
+                containment: '#lemon-paeroa'
+            });
+
+            $('.img-collage').draggable({
+                containment: '#collage'
+            });
+        });
+
+        // Make 3D objects draggable
+        const draggables = document.querySelectorAll('.draggable');
+
+        draggables.forEach(draggable => {
+            let isDragging = false;
+            let offsetX, offsetY;
+
+            // Mouse down event to initiate dragging
+            draggable.addEventListener('mousedown', (e) => {
+                isDragging = true;
+                offsetX = e.clientX - draggable.offsetLeft;
+                offsetY = e.clientY - draggable.offsetTop;
+                draggable.style.cursor = 'grabbing';
+            });
+
+            // Mouse move event to handle dragging
+            document.addEventListener('mousemove', (e) => {
+                if (isDragging) {
+                    draggable.style.left = `${e.clientX - offsetX}px`;
+                    draggable.style.top = `${e.clientY - offsetY}px`;
+                }
+            });
+
+            // Mouse up event to stop dragging
+            document.addEventListener('mouseup', () => {
+                isDragging = false;
+                draggable.style.cursor = 'grab';
+            });
+        });
+
+        // Mute button
+        document.getElementById("mute-button").addEventListener("click", function () {
+            var video = document.getElementById("kiwiburger-1995");
+            video.muted = !video.muted; // Toggle mute
+            this.textContent = video.muted ? "Unmute" : "Mute"; // Change button text
+        });
+
+        // test scroll-in text animation
+        // select all images to be moved
+        const images = document.querySelectorAll('.img-about');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('show'); // Add class to show the image
+                    // Optionally remove the class when it goes out of view
+                    entry.target.addEventListener('animationend', () => {
+                        entry.target.classList.remove('show');
+                    });
+                } else {
+                    entry.target.classList.remove('show'); // Remove class when not in view
+                }
+            });
+        }, {
+            threshold: 0.1 // Trigger when 10% of the element is in view
+        });
+        // Start observing each image
+        images.forEach(image => {
+            observer.observe(image);
+        });
+
+
+        document.addEventListener("DOMContentLoaded", function () {
+            const scrollText = document.querySelectorAll('.scroll-text');
+
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('show');  // Add class when entering the viewport
+                    } else {
+                        entry.target.classList.remove('show');  // Remove class when exiting the viewport
+                    }
+                });
+            });
+
+            scrollText.forEach(text => {
+                observer.observe(text);
+            });
+        });
+
+
+
+    </script>
+
+</body>
+
+</html>

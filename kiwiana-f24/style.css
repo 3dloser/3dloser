@@ -1,0 +1,878 @@
+@font-face {
+    font-family: 'Kalakala';
+    src: url('assets/fonts/Kalakala-Regular.woff2') format('woff2'),
+        url('assets/fonts/Kalakala-Regular.woff') format('woff'),
+        url('assets/fonts/Kalakala-Regular.otf') format('otf');
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    cursor: url('assets/o-cursor.png'), auto;
+    overflow-x: hidden;
+
+}
+
+
+.body-container {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    width: 100%;
+
+}
+
+.hero-container {
+    box-sizing: border-box;
+    position: fixed;
+    padding-top: 50px;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-left: 1rem solid #02B2FE;
+    border-right: 1rem solid #02B2FE;
+    background: conic-gradient(#FE5F02 90deg,
+            #FFE100 90deg 180deg,
+            #FE5F02 180deg 270deg,
+            #FFE100 270deg);
+    background-repeat: repeat;
+    background-size: 30px 30px;
+    background-position: top left;
+}
+
+#mute-button {
+    position: fixed;
+    top: 1rem;
+    left: 2rem;
+    z-index: 100;
+}
+
+.scroll-content {
+    box-sizing: border-box;
+    z-index: 1;
+    position: relative;
+    top: 100vh;
+    width: 100%;
+    border-left: 1rem solid #02B2FE;
+    border-right: 1rem solid #02B2FE;
+}
+
+/* title */
+
+.kiwiana-title h3 {
+    color: #02B2FE;
+    font-size: 10rem;
+}
+
+h1 {
+    font-family: 'Kalakala', sans-serif;
+    font-size: 10rem;
+    text-align: center;
+    color: #02B2FE;
+    text-shadow:
+        5px 5px 0 black,
+        -5px -5px 0 black,
+        5px -5px 0 black,
+        -5px 5px 0 black;
+    position: relative;
+    z-index: 1;
+    margin-top: 0;
+
+    opacity: 0;
+    margin-bottom: 0;
+    animation: fadeInFromTop 1s ease-out forwards;
+    /* animation: bobbing 3s ease-in-out infinite; */
+}
+
+@keyframes fadeInFromTop {
+    0% {
+      opacity: 0;
+      transform: translateY(-50px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+
+.title-animate {
+    display: inline-block;
+    animation: bobbing 3s ease-in-out infinite;
+
+}
+
+@keyframes bobbing {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-15px);
+    }
+}
+
+title-animate:nth-child(3n) {
+    animation-delay: 0s;
+}
+
+.title-animate:nth-child(3n+1) {
+    animation-delay: 0.3s;
+}
+
+.title-animate:nth-child(3n+2) {
+    animation-delay: 0.6s;
+}
+
+
+
+/* ================================ video ================================ */
+
+#about-video {
+    display: flex;
+    justify-content: center;
+    /* position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); */
+}
+
+#kiwiburger-1995 {
+    width: 1000px;
+}
+
+.vid-mask {
+    mask-image: radial-gradient(ellipse 62% 62% at 50% 50%,
+            /* Oval size and position */
+            rgba(0, 0, 0, 1) 75%,
+            /* Solid part inside */
+            rgba(0, 0, 0, 0) 80%);
+    /* Fuzzy edges */
+    -webkit-mask-image: radial-gradient(ellipse 62% 62% at 50% 50%,
+            /* For WebKit browsers */
+            rgba(0, 0, 0, 1) 75%,
+            rgba(0, 0, 0, 0) 80%);
+}
+
+/* 3d models */
+
+.model-container {
+  
+    width: 100%;
+  
+}
+
+.draggable {
+   
+    /* top: 30%;
+    left: 50%;
+    transform: translateX(-50%); */
+    z-index: 2;
+    width: 80%;
+    height: 80%;
+}
+
+.draggable:active {
+    cursor: grabbing;
+}
+
+model-viewer {
+    position: absolute;
+    width: 400px;
+    height: 400px;
+}
+
+
+/* menu */
+ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    position: fixed;
+    top: 20px;
+    width: 80%;
+    justify-content: space-between;
+}
+
+button {
+    border: .3rem solid black;
+    background-color: #FE5F02;
+    color: #FFE100;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 2rem;
+    font-weight: 800;
+}
+
+button:hover {
+    cursor: url('assets/o-cursor.png'), auto;
+}
+
+li {
+    margin-right: 20px;
+}
+
+a {
+    color: #FFE100;
+    text-decoration: none;
+}
+
+a:hover {
+    cursor: url('assets/o-cursor.png'), auto;
+}
+
+/* scroll bar */
+::-webkit-scrollbar {
+    width: 20px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background-color: #FFE100;
+
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #FE5F02;
+    border-radius: 10px;
+    height: 10px;
+}
+
+/* ================ Handle ================== */
+
+
+.text-stroke {
+    text-shadow:
+        2px 0 0 black,
+        -2px 0 0 black,
+        0 2px 0 black,
+        0 -2px 0 black;
+}
+
+/* ================================ ------- about section ------- ================================ */
+
+h3 {
+    font-size: 8rem;
+    font-family: 'Kalakala', sans-serif;
+    text-align: center;
+    color: #FFE100;
+    margin: 0 auto;
+    display: block;
+}
+
+
+/* ================================ intro text ================================ */
+
+#about-title {
+    background-color: #FE5F02;
+    /* padding: 10rem 3rem; */
+    position: relative;
+    height: 700px;
+    padding-left: 3rem;
+    padding-right: 3rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.img-about {
+    opacity: 0;
+    transform: translateY(100px);
+    transition: transform 1s ease;
+    width: 200px;
+    height: auto;
+    position: absolute;
+
+}
+
+.img-about.show {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+/* ================================ four square ================================ */
+
+#four-sq {
+    background-image: url("assets/kiwiana/foursquare/4s_bg.jpg");
+    position: relative;
+    height: 1000px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.img-4s {
+    position: absolute;
+}
+
+.grow-shrink {
+    transition: transform 0.5s ease-in-out;
+    animation: growShrink 3s infinite ease-in-out;
+}
+
+@keyframes growShrink {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.5);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.rotate-left-right {
+    animation: rotateLR 5s infinite ease-in-out;
+}
+
+@keyframes rotateLR {
+    50% {
+        transform: rotate(45deg);
+    }
+}
+
+/* ================================ watties ================================ */
+
+#watties {
+    position: relative;
+    /* height: 600px; */
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#watties h3 {
+    background: conic-gradient(#00C241 90deg,
+            #02B2FE 90deg 180deg,
+            #00C241 180deg 270deg,
+            #02B2FE 270deg);
+
+            background-repeat: repeat;
+    background-size: 30px 30px;
+    background-position: top left;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+
+.img-watties {
+    position: absolute;
+}
+
+.watties-bg-layers {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.watties-bg-row {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.watties-bg-L {
+    display: flex;
+    flex-direction: column;
+    width: 64.45%;
+}
+
+.watties-bg-L2 {
+    display: flex;
+    flex-direction: row;
+    width: 64.45%;
+}
+
+.watties-bg-L2 img {
+    width: 78%;
+}
+
+
+.watties-bg-R {
+    display: flex;
+    flex-direction: column;
+    width: 35.6%;
+}
+
+.bobbing {
+    animation: bob 2s infinite ease-in-out;
+}
+
+@keyframes bob {
+    0% {
+        transform: translateY(0);
+        /* Start at original position */
+    }
+
+    50% {
+        transform: translateY(-20px);
+        /* Move up */
+    }
+
+    100% {
+        transform: translateY(0);
+        /* Move back to the original position */
+    }
+}
+
+
+.blinking {
+    opacity: 0;
+    animation: blink .5s infinite;
+}
+
+@keyframes blink {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+.spinning {
+    animation: spin 5s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.bouncing {
+    animation: bounce 5s ease-in-out infinite;
+}
+
+@keyframes bounce {
+    0% {
+        top: 1200px;
+        left: 500px;
+    }
+
+    50% {
+        top: 1500px;
+        left: 500px;
+        transform: translateY(-100%);
+    }
+
+    100% {
+        top: 1200px;
+        left: 500px;
+        transform: translateY(0%);
+    }
+}
+
+/* ================================ buzzy bee ================================ */
+
+#buzzy-bee {
+    position: relative;
+
+}
+
+#buzzy-top {
+    position: relative;
+    height: 1000px;
+    background-image: url(assets/kiwiana/buzzybee/buzzy_bg.png);
+    background-repeat: repeat;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+#buzzy-bottom {
+    position: relative;
+    height: 400px;
+    background-image: url(assets/kiwiana/buzzybee/buzzy_wall.png);
+    background-repeat: repeat-x;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+
+#buzzy-bottom h3 {
+    font-size: 4rem;
+    padding-bottom: 4rem;
+}
+
+.img-buzzy-bee {
+    position: absolute;
+}
+
+.mini-bobbing {
+    animation: bob-mini 2s infinite ease-in-out;
+}
+
+@keyframes bob-mini {
+    0% {
+        transform: translateY(0);
+        /* Start at original position */
+    }
+
+    50% {
+        transform: translateY(-5px);
+        /* Move up */
+    }
+
+    100% {
+        transform: translateY(0);
+        /* Move back to the original position */
+    }
+}
+
+.delay-1 {
+    animation-delay: 0.3s;
+}
+
+.delay-2 {
+    animation-delay: 0.6s;
+}
+
+.delay-3 {
+    animation-delay: 0.9s;
+}
+
+.delay-4 {
+    animation-delay: 1.2s;
+}
+
+.delay-5 {
+    animation-delay: 1.5s;
+}
+
+.delay-6 {
+    animation-delay: 1.8s;
+}
+
+/* ================================ hokey pokey ================================ */
+
+#hokey-pokey {
+    position: relative;
+    background-image: url('assets/kiwiana/hokeypokey/hp_bg.png');
+    background-size: cover;
+    height: 1000px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.img-hokey-pokey {
+    position: absolute;
+}
+
+.bobbing-2 {
+    animation: bob2 3s infinite ease-in-out;
+}
+
+@keyframes bob2 {
+    0% {
+        transform: translateY(0);
+        /* Start at original position */
+    }
+
+    50% {
+        transform: translateY(-30px);
+        /* Move up */
+    }
+
+    100% {
+        transform: translateY(0);
+        /* Move back to the original position */
+    }
+}
+
+/* ================================ edmonds ================================ */
+
+#edmonds {
+    position: relative;
+    background-image: url('assets/kiwiana/edmonds/edmonds_bg.png');
+    background-size: cover;
+    height: 1200px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.img-edmonds {
+    position: absolute;
+}
+
+/* ================================ gumboots ================================ */
+
+#gumboot {
+    position: relative;
+    background-image: url('assets/kiwiana/sheep/sheep-bg.png');
+    background-size: cover;
+    height: 1000px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.img-gumboot {
+    position: absolute;
+}
+
+.rotate-left-right-2 {
+    animation: rotateLR-2 5s infinite ease-in-out;
+}
+
+@keyframes rotateLR-2 {
+    50% {
+        transform: rotate(-15deg);
+    }
+}
+
+.rotate-left-right-3 {
+    animation: rotateLR-3 5s infinite ease-in-out;
+}
+
+@keyframes rotateLR-3 {
+    50% {
+        transform: rotate(10deg);
+    }
+}
+
+.grow-shrink-2 {
+    transition: transform 0.5s ease-in-out;
+    animation: growShrink-2 2s infinite ease-in-out;
+}
+
+@keyframes growShrink-2 {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.flipping {
+    animation: flip 2s infinite ease-in-out;
+}
+
+@keyframes flip {
+    0% {
+      transform: rotateY(0deg);
+    }
+    50% {
+      transform: rotateY(180deg);
+    }
+    100% {
+      transform: rotateY(360deg);
+    }
+  }
+
+  /* ================================ L&P ================================ */
+
+#lemon-paeroa {
+    position: relative;
+    background-image: url('assets/kiwiana/lemonpaeroa/lp_bg.png');
+    background-size: cover;
+    background-position: center;
+    height: 1000px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.img-lemon-paeroa {
+    position: absolute;
+}
+
+.vid-mask-2 {
+    mask-image: radial-gradient(ellipse 50% 50% at 50% 50%,
+            /* Oval size and position */
+            rgba(0, 0, 0, 1) 65%,
+            /* Solid part inside */
+            rgba(0, 0, 0, 0) 80%);
+    /* Fuzzy edges */
+    -webkit-mask-image: radial-gradient(ellipse 50% 50% at 50% 50%,
+            /* For WebKit browsers */
+            rgba(0, 0, 0, 1) 65%,
+            rgba(0, 0, 0, 0) 80%);
+}
+
+/* ================================ edmonds ================================ */
+
+#collage {
+    position: relative;
+    background-image: url('assets/kiwiana/collage/collage_bg.png');
+    background-size: cover;
+    height: 1200px;
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.img-collage {
+    position: absolute;
+}
+
+@keyframes scrollUp {
+    0% {
+      transform: translateY(500px); 
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(-200px); 
+      opacity: 1;
+    }
+  }
+  
+  .scroll-text {
+    opacity: 0; 
+    transform: translateY(100px); 
+    transition: transform 1s ease-out, opacity 1s ease-out;
+  }
+  
+  .scroll-text.show {
+    animation: scrollUp 1s ease-out forwards;
+  }
+
+  /* ================================ final block ================================ */
+
+#final-block {
+    position: relative;
+    background-color: #FE5F02;
+
+    display: flex;
+    flex-direction: row;
+    /* justify-content: center; */
+    text-align: left;
+    font-family: Arial, Helvetica, sans-serif;
+    /* font-family: Arial Narrow, Helvetica, sans-serif; */
+    /* font-family: 'Courier New', Courier, monospace; */
+    color: #FFE100;
+    /* padding: 2rem 5rem; */
+}
+
+#final-block p {
+    font-size: 3rem;
+   
+}
+
+#final-block .p2 {
+    font-size: 1rem;
+    padding-top: 0rem;
+    line-height: 1rem;
+}
+
+.col-1 {
+display: flex;
+flex-direction: column;
+width: 60%;
+padding-right: 4rem;
+padding-left: 5rem;
+}
+
+.col-2 {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    padding-right: 5rem;
+padding-left: 5rem;
+    }
+
+    hr {
+        border-bottom: 1px solid #FFE100;
+        width: 100%;
+    }
+
+/* ================================ MEDIA QUERIES ================================ */
+
+@media screen and (max-width: 1300px) {
+    h1 {
+        font-size: 12rem;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    h1 {
+        font-size: 10rem;
+    }
+}
+
+@media screen and (max-width: 780px) {
+    h1 {
+        font-size: 5rem;
+        letter-spacing: 0;
+    }
+
+    #kiwiburger-1995 {
+        width: 1000px;
+    }
+
+    .vid-mask {
+        mask-image: radial-gradient(ellipse 30% 62% at 50% 50%,
+                /* Oval size and position */
+                rgba(0, 0, 0, 1) 75%,
+                /* Solid part inside */
+                rgba(0, 0, 0, 0) 80%);
+        /* Fuzzy edges */
+        -webkit-mask-image: radial-gradient(ellipse 30% 62% at 50% 50%,
+                /* For WebKit browsers */
+                rgba(0, 0, 0, 1) 75%,
+                rgba(0, 0, 0, 0) 80%);
+    }
+
+    h3 {
+        font-size: 3.5rem;
+    }
+
+    #final-block {
+        flex-direction: column;
+    }
+
+    #final-block p{
+       font-size: 1rem;
+       padding-top: 2rem;
+    }
+
+    .col-1 {
+        width: 80%;
+        padding: auto 2rem;
+    }
+
+    .col-2  {
+        width: 80%;
+        padding: auto 2rem;
+    }
+
+}
