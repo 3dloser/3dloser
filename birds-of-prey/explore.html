@@ -43,7 +43,7 @@
         .main {
             display: flex;
             flex-direction: row;
-            height: 20000px;
+            height: 15000px;
         }
 
         .altitude-meter {
@@ -108,12 +108,16 @@
         }
 
         figure {
-            position: absolute;
+            position: relative;
             display: inline-block;
         }
 
         figure img {
             display: block;
+        }
+
+        .jets figure {
+            position: absolute;
         }
 
         .jets figure:hover {
@@ -313,11 +317,6 @@
             align-content: center;
         }
 
-        .bird-story-header .dot {
-            background-color: black;
-            margin-right: 10px;
-        }
-
         .bullet {
             font-size: 4rem;
             line-height: 2rem;
@@ -383,6 +382,17 @@
                 z-index: 1000;
                 overflow-y: scroll;
             }
+
+            .bird-story {
+                width: 100vw;
+                left: 0;
+                bottom: 0;
+                position: fixed;
+                z-index: 1000;
+                overflow-y: scroll;
+            }
+
+
         }
     </style>
 </head>
@@ -405,7 +415,7 @@
                 <img src="assets/SVG/F-15I.svg" width="400px" />
             </figure>
 
-            <figure altitude="50000" onclick="showBirdInfo('F-22 Raptor')">
+            <figure altitude="52000" onclick="showBirdInfo('F-22 Raptor')" style="left: 600px;">
                 <img src="assets/SVG/F-22.svg" width="450px" />
             </figure>
 
@@ -421,7 +431,7 @@
                 <img src="assets/SVG/707.svg" width="650px" />
             </figure>
 
-            <figure altitude="45000" onclick="showBirdInfo('HERON TP')">
+            <figure altitude="42000" onclick="showBirdInfo('HERON TP')">
                 <img src="assets/SVG/heron-tp.svg" width="400px" />
             </figure>
 
@@ -441,7 +451,7 @@
                 <img src="assets/SVG/C-17.svg" width="1000px" />
             </figure>
 
-            <figure altitude="29000" onclick="showBirdInfo('C-130J Super Hercules')">
+            <figure altitude="31000" onclick="showBirdInfo('C-130J Super Hercules')">
                 <img src="assets/SVG/c-130J.svg" width="500px" />
             </figure>
 
@@ -630,6 +640,44 @@
             // select all figure elements
             const figures = document.querySelectorAll(".jets figure");
 
+            // ====== jet horizontal positioning ======
+            // array of possible horizontal positions
+            const assignRandomPositions = () => {
+                const horizontalPositions = [100, 200, 300, 400, 500, 600, 700, 800, 900, 1000];
+
+                // randomize positions
+                horizontalPositions.sort(() => Math.random() - 0.5);
+
+                // assign random position to each jet
+                figures.forEach((figure, index) => {
+                    const jetPosition = horizontalPositions[index % horizontalPositions.length];
+                    figure.style.left = `${jetPosition}px`;
+                });
+
+            };
+
+            // call function
+            assignRandomPositions();
+
+            const assignRandomPositionsMobile = () => {
+                const horizontalPositions = [50, 100, 150, 200, 250, 300, 350, 400];
+                // randomize positions
+                horizontalPositions.sort(() => Math.random() - 0.5);
+                // assign random position to each jet
+                figures.forEach((figure, index) => {
+                    const jetPosition = horizontalPositions[index % horizontalPositions.length];
+                    figure.style.left = `${jetPosition}px`;
+                });
+            };
+
+            // reassign positions when window resize
+            window.addEventListener('resize', () => {
+                if (window.innerWidth < 800) {
+                    assignRandomPositionsMobile();
+                }
+            });
+
+            // ====== play audio on hover ======
             figures.forEach(figure => {
                 // mouse enter
                 figure.addEventListener("mouseenter", () => {
@@ -648,7 +696,6 @@
                             audioElement.src = bird.sound.src;
                             document.body.appendChild(audioElement);
                         }
-
                         // play audio
                         audioElement.currentTime = 0;
                         audioElement.play();
@@ -675,11 +722,6 @@
         // ****** ****** ****** ****** ****** ****** ******
 
 
-
-
-
-
-
         function showStory1() {
             var s1 = document.getElementById("story-1");
             if (s1.style.display === "none") {
@@ -699,24 +741,6 @@
         }
 
 
-
-
-        // Function to close the bird info container
-        function closeBirdInfo() {
-            const container = document.getElementById('bird-info-container');
-            if (container) {
-                container.innerHTML = ''; // Clear the content
-                container.removeAttribute('bird-active'); // Remove the active bird attribute
-            }
-        }
-
-        // Attach the close functionality after DOM is fully loaded
-        document.addEventListener('DOMContentLoaded', () => {
-            const closeButton = document.getElementById('close-button');
-            if (closeButton) {
-                closeButton.addEventListener('click', closeBirdInfo);
-            }
-        });
 
 
     </script>
