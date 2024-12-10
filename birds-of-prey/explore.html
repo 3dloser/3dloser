@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birds of Prey</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=League+Gothic&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Xanh+Mono:ital@0;1&display=swap" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/plantin-mt-pro" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.typekit.net/pod6wua.css">
+    <link rel="icon" type="image/x-icon" href="assets/SVG/bird_icon.svg">
+    <script src="birdList.js"></script>
+
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            background-color: rgba(22, 25, 41, 1);
+        }
+
+        body {
+            background: linear-gradient(180deg, rgba(22, 25, 41, 1) 0%, rgba(99, 110, 140, 1) 52%, rgba(186, 144, 131, 1) 85%, rgba(247, 165, 106, 1) 100%);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center top;
+            overflow-x: hidden;
+            height: 100%;
+        }
+
+        .ground {
+            background-color: black;
+            height: 500px;
+        }
+
+        .main {
+            display: flex;
+            flex-direction: row;
+            height: 20000px;
+        }
+
+        .altitude-meter {
+            position: fixed;
+            left: 0;
+            top: 0;
+            bottom: 30px;
+        }
+
+        #altitude-meter-border {
+            position: fixed;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            border-left: 2px solid white;
+        }
+
+        #arrow-indicator {
+            position: absolute;
+            left: 0px;
+            width: 40px;
+            height: 20px;
+            border: 10px solid transparent;
+            border-left: 10px solid white;
+            transform: translateY(-50%);
+            margin-top: 20px;
+        }
+
+        #altitude-number {
+            mix-blend-mode: difference;
+            position: absolute;
+            margin-top: 10px;
+        }
+
+        .altitude-meter h2 {
+            font-family: "Xanh Mono", monospace;
+            color: #F7F7E7;
+            font-weight: 800;
+            font-size: 1rem;
+            padding-left: 30px;
+            white-space: nowrap;
+        }
+
+
+        .jets {
+            position: relative;
+            margin: 30px;
+            /* height: 100%; */
+            min-height: 100vh;
+        }
+
+        .jets figure:hover {
+            cursor: pointer;
+        }
+
+        .jets figure {
+            margin: 200px auto;
+        }
+
+        button:hover {
+            cursor: pointer;
+        }
+
+        figure {
+            position: absolute;
+            display: inline-block;
+        }
+
+        figure img {
+            display: block;
+        }
+
+        .jets figure:hover {
+            transform: scale(1.1);
+        }
+
+        #bird-info-container {
+            background-color: #A3B13B;
+        }
+
+        .bird-info {
+            animation: slide-in 400ms;
+        }
+
+        @keyframes slide-in {
+            from {
+                right: -150%;
+            }
+
+            to {
+                right: 0;
+            }
+        }
+
+
+        .bird-info {
+            padding: 30px;
+            top: 0;
+            right: 0;
+            position: fixed;
+            background-color: #A3B13B;
+            height: 100vh;
+            overflow-y: scroll;
+            width: 500px;
+        }
+
+        .pages h1 {
+            font-family: "League Gothic", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 400;
+            font-size: 5rem;
+            line-height: .8;
+            font-variation-settings: "wdth" 100;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            text-transform: uppercase;
+        }
+
+        .pages p {
+            /* font-family: "neue-haas-unica", sans-serif; */
+            font-family: 'Plantin MT Pro', sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            line-height: 1.2;
+        }
+
+        .pages figure {
+            padding-top: 40px;
+            padding-bottom: 40px;
+        }
+
+        .pages figure img {
+            width: 400px;
+        }
+
+        .pages h2 {
+            font-family: "Xanh Mono", monospace;
+            text-transform: capitalize;
+            font-weight: 800;
+            letter-spacing: 2px;
+            font-size: 1rem;
+        }
+
+        .pages h3 {
+            /* color: #009260; */
+            text-transform: uppercase;
+            font-size: .8rem;
+            letter-spacing: 2px;
+            font-family: "neue-haas-unica", sans-serif;
+            font-weight: 800;
+        }
+
+        .info-dimensions {
+            border-top: 1px solid black;
+        }
+
+        hr {
+            border: .5px solid black;
+        }
+
+        .info-header {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        .info-dimensions {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        .info-description {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .info-description hr {
+            margin-top: 30px;
+        }
+
+        .sound-description {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        .sound-description button {
+            padding-top: 5px;
+        }
+
+        button {
+            all: unset;
+        }
+
+
+        .origin-header {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+
+        .origin-header p {
+            padding-top: 3px;
+        }
+
+        .point-of-origin img {
+            width: 300px;
+            padding-top: 10px;
+        }
+
+        .dot {
+            height: 50px;
+            width: 50px;
+        }
+
+        .dot-T {
+            width: 15px;
+            height: 15px;
+            background-color: black;
+            margin-right: 10px;
+        }
+
+        .dot:hover {
+            transform: scale(2.5);
+            cursor: pointer;
+        }
+
+        #dot-1 {
+            position: absolute;
+            left: 200px;
+            top: 300px;
+        }
+
+        #dot-2 {
+            position: absolute;
+            left: 600px;
+            bottom: 3600px;
+        }
+
+        .bird-story {
+            position: fixed;
+            overflow-y: scroll;
+            top: 0;
+            right: 0;
+            width: 500px;
+            height: 100vh;
+            padding: 30px;
+            padding-top: 20px;
+            background-color: #a7c4c9;
+            animation: slide-in 400ms;
+        }
+
+        #story-1 {
+            display: none;
+        }
+
+        #story-2 {
+            display: none;
+        }
+
+        .bird-story-header {
+            display: flex;
+            flex-direction: row;
+            align-content: center;
+        }
+
+        .bird-story-header .dot {
+            background-color: black;
+            margin-right: 10px;
+        }
+
+        .bullet {
+            font-size: 4rem;
+            line-height: 2rem;
+        }
+
+        .bird-story img {
+            width: 300px;
+            padding-bottom: 20px;
+            padding-top: 20px;
+        }
+
+        .bird-story h1 {
+            font-family: "Xanh Mono", monospace;
+            font-size: 4rem;
+            line-height: 1;
+        }
+
+        .bird-story h2 {
+            font-family: "Xanh Mono", monospace;
+            font-size: 1rem;
+            text-transform: uppercase;
+            line-height: 1;
+        }
+
+        .bird-story,
+        #intro p {
+            /* font-family: "Xanh Mono", monospace; */
+            font-family: 'Plantin MT Pro', sans-serif;
+            font-weight: 400;
+            font-size: 1.5rem;
+            line-height: 1;
+        }
+
+        #intro {
+            display: none;
+            position: fixed;
+            overflow-y: scroll;
+            top: 0;
+            right: 0;
+            width: 500px;
+            height: 100vh;
+            padding: 30px;
+            padding-top: 20px;
+            background-color: #cdfc23;
+        }
+
+        #intro p {
+            font-size: 2rem;
+            text-indent: 50px;
+            color: black;
+        }
+
+        .indent {
+            padding-left: 50px;
+        }
+
+        @media screen and (max-width: 800px) {
+            .bird-info {
+                width: 100vw;
+                left: 0;
+                bottom: 0;
+                position: fixed;
+                z-index: 1000;
+                overflow-y: scroll;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="altitude-meter-border">
+        <div class="altitude-meter ">
+            <h2 id="altitude-number">70,000 ft</h2>
+            <div id="arrow-indicator"></div>
+        </div>
+    </div>
+    <div class="ruler" id="ruler"></div>
+
+    <div class="main">
+        <div class="jets">
+            <img class="dot" id="dot-1" onclick="showStory1()" src="assets/SVG/star.svg" />
+            <img class="dot" id="dot-2" onclick="showStory2()" src="assets/SVG/star.svg" />
+
+            <figure altitude="65000" onclick="showBirdInfo('F-15I RA’AM')">
+                <img src="assets/SVG/F-15I.svg" width="400px" />
+            </figure>
+
+            <figure altitude="50000" onclick="showBirdInfo('F-22 Raptor')">
+                <img src="assets/SVG/F-22.svg" width="450px" />
+            </figure>
+
+            <figure altitude="50000" onclick="showBirdInfo('MQ-9 REAPER')">
+                <img src="assets/SVG/mq-9.svg" width="450px" />
+            </figure>
+
+            <figure altitude="48000" onclick="showBirdInfo('F-35I ADIR')">
+                <img src="assets/SVG/F-35I.svg" width="350px" />
+            </figure>
+
+            <figure altitude="45000" onclick="showBirdInfo('707')">
+                <img src="assets/SVG/707.svg" width="650px" />
+            </figure>
+
+            <figure altitude="45000" onclick="showBirdInfo('HERON TP')">
+                <img src="assets/SVG/heron-tp.svg" width="400px" />
+            </figure>
+
+            <figure altitude="35000" onclick="showBirdInfo('HERON 1')">
+                <img src="assets/SVG/heron-1.svg" width="320px" />
+            </figure>
+
+            <figure altitude="33000" onclick="showBirdInfo('F-16 FIGHTER FALCON')">
+                <img src="assets/SVG/F-16.svg" width="350px" />
+            </figure>
+
+            <figure altitude="29000" onclick="showBirdInfo('HERMES 900')">
+                <img src="assets/SVG/Hermes900.svg" width="250px" />
+            </figure>
+
+            <figure altitude="38000" onclick="showBirdInfo('C-17 GLOBE MASTER III')">
+                <img src="assets/SVG/C-17.svg" width="1000px" />
+            </figure>
+
+            <figure altitude="29000" onclick="showBirdInfo('C-130J Super Hercules')">
+                <img src="assets/SVG/c-130J.svg" width="500px" />
+            </figure>
+
+            <figure altitude="29000" onclick="showBirdInfo('AH-64 Apache')">
+                <img src="assets/SVG/ah-64.svg" width="450px" />
+            </figure>
+
+            <figure altitude="22000" onclick="showBirdInfo('UH-60 BLACK HAWK')">
+                <img src="assets/SVG/UH-60.svg" width="480px" />
+            </figure>
+
+            <figure altitude="18000" onclick="showBirdInfo('HERMES 450')">
+                <img src="assets/SVG/hermes450.svg" width="200px" />
+            </figure>
+
+            <figure altitude="1000" onclick="showBirdInfo('XTENDER')">
+                <img src="assets/SVG/xtender.svg" width="100px" />
+            </figure>
+
+            <figure altitude="8000" onclick="showBirdInfo('MATRICE 600')">
+                <img src="assets/SVG/matrice-600.svg" width="150px" />
+            </figure>
+
+        </div>
+
+        <div class="pages">
+
+            <div class="bird-story" id="story-1">
+                <div class="bird-story-header">
+                    <div class="dot-T"></div>
+                    <h2>Transmission #001</h2>
+                </div>
+                <h1>
+                    Kamikaze Pigeons
+                </h1>
+                <img src="assets/pigeon/2.jpg" />
+                <p>
+                    During World War II, American psychologist B.F. Skinner trained pigeons to guide missiles. Skinner
+                    became inspired to devise an organically controlled weapons guiding system when he saw a flock of
+                    birds flying by—
+                </p>
+                <p class="indent">
+                    “suddenly I saw [pigeons] as ‘devices’ with excellent vision and extraordinary maneuverability.
+                    Could they not guide a missile?”
+                </p>
+                <img src="assets/pigeon/4.jpg">
+                <p>
+                    Using pigeons’ excellent ability for image recognition, Skinner trained pigeons to recognize targets
+                    and peck at said targets. He placed pigeons in the nose cones of missiles, each cone fitted with
+                    three small screens and three pigeon cockpits. When all three pigeons pecked, the missile was
+                    mechanically steered until it reached its mark —and all would perish.
+                </p>
+            </div>
+
+            <div class="bird-story" id="story-2">
+                <div class="bird-story-header">
+                    <div class="dot-T"></div>
+                    <h2>Transmission #002</h2>
+                </div>
+                <h1>
+                    Sharing<br>the Air
+                </h1>
+                <img src="assets/share_the_air.png" />
+                <p>
+                    Israel has very little airspace but one of the world’s largest air forces. As a result, every year,
+                    the planes face their most formidable foes in the sky: large migrating birds, specifically raptors
+                    that travel by gliding across columns of hot air from the land. A New York Times article from 1985
+                    states,
+                </p>
+                <p class="indent">
+                    “migrating buzzards, storks, pelicans, and eagles have done more damage to Israeli fighter jets than
+                    all the Arab air forces combined. ”
+                </p>
+                <p>
+                    A two-pound buzzard striking a jet fighter flying at 500 miles per hour can have an impact equal to
+                    20 tons. Israeli ornithologist Yossi Leshem, aided by radar and aircraft observation, devised “bird
+                    protection zones.” Flight routes and altitudes were monitored and mapped out in order for the air
+                    force to avoid collisions.
+                </p>
+            </div>
+
+            <!-- TEMPLATE -->
+
+            <template id="bird-template">
+                <div class="bird-info">
+                    <div class="info-header">
+                        <h2>{{manufacturer}}</h2>
+                        <h2>{{type}}</h2>
+                    </div>
+                    <h1>{{model}}</h1>
+                    <div class="info-dimensions">
+                        <div>
+                            <h3>Length</h3>
+                            <p>{{length}}</p>
+                        </div>
+                        <div>
+                            <h3>Wingspan</h3>
+                            <p>{{wingspan}}</p>
+                        </div>
+                    </div>
+                    <figure>
+                        <img src="{{imgSource}}" width="{{imgWidth}}">
+                    </figure>
+                    <hr>
+                    <div class="info-description">
+                        <div class="behavior-description">
+                            <h3>Behavior</h3>
+                            <p>{{behavior}}</p>
+                        </div>
+                        <hr>
+                        <div class="sound-description">
+                            <h3>Sound</h3>
+                            <button onclick="playAudio('{{audioId}}')">
+                                <img src="assets/SVG/sound.svg" width="30px">
+                            </button>
+                            <audio id="{{audioId}}">
+                                <source src="{{audioSrc}}" type="audio/mpeg">
+                            </audio>
+                        </div>
+                        <hr>
+                        <div class="point-of-origin">
+                            <div class="origin-header">
+                                <h3>Point of Origin</h3>
+                                <p>{{country}}</p>
+                            </div>
+                            <img src="{{mapSrc}}">
+                        </div>
+                    </div>
+                </div>
+            </template>
+
+            <div id="bird-info-container"></div>
+
+
+        </div>
+
+    </div>
+    <!-- <div class="ground"></div> -->
+
+    <script>
+        document.addEventListener("scroll", () => {
+            const altitudeNumber = document.getElementById("altitude-number");
+
+            // get the current scroll position and map it to the altitude range
+            const scrollY = window.scrollY;
+            const maxScroll = document.body.scrollHeight - window.innerHeight;
+            const maxAltitude = 70000;
+            const altitude = Math.max(0, Math.round(maxAltitude - (scrollY / maxScroll) * maxAltitude)
+            );
+
+            // update the altitude display
+            altitudeNumber.textContent = `${altitude.toLocaleString()} ft`;
+            console.log('altitude:' + altitude);
+
+            // arrow
+            const arrowIndicator = document.getElementById("arrow-indicator");
+            const arrowPosition = (scrollY / maxScroll) * 100;
+
+            arrowIndicator.style.top = `${arrowPosition}%`;
+            altitudeNumber.style.top = `${arrowPosition}%`;
+            console.log(altitudeNumber);
+        });
+
+
+        // ****** the folllowing is w help from chatGPT! ******
+        document.querySelectorAll('[altitude]').forEach(birdAlt => {
+            const minAltitude = 0;
+            const maxAltitude = 70000;
+            const minTop = 90;
+            const maxTop = 0;
+
+            // read altitude value
+            const altitude = parseInt(birdAlt.getAttribute('altitude'), 10);
+
+            if (!isNaN(altitude)) {
+                // position from top based on attitude value
+                const topPosition =
+                    maxTop + ((minTop - maxTop) * (maxAltitude - altitude)) / (maxAltitude - minAltitude);
+                // set calculated position
+                birdAlt.style.top = `${topPosition}%`;
+            }
+        });
+
+
+        document.addEventListener("DOMContentLoaded", () => {
+            // select all figure elements
+            const figures = document.querySelectorAll(".jets figure");
+
+            figures.forEach(figure => {
+                // mouse enter
+                figure.addEventListener("mouseenter", () => {
+                    //get model name and find it
+                    const model = figure.getAttribute("onclick").match(/'([^']+)'/)[1];
+                    const bird = birdList.find(b => b.model === model);
+
+                    // match to corresponding sound ID
+                    if (bird && bird.sound && bird.sound.src) {
+                        let audioElement = document.getElementById(bird.sound.audioId);
+
+                        if (!audioElement) {
+                            // create audio element if it doesn't exist
+                            audioElement = document.createElement("audio");
+                            audioElement.id = bird.sound.audioId;
+                            audioElement.src = bird.sound.src;
+                            document.body.appendChild(audioElement);
+                        }
+
+                        // play audio
+                        audioElement.currentTime = 0;
+                        audioElement.play();
+                    }
+                });
+
+                // stop audio when mouse leaves
+                figure.addEventListener("mouseleave", () => {
+                    const model = figure.getAttribute("onclick").match(/'([^']+)'/)[1];
+                    const bird = birdList.find(b => b.model === model);
+
+                    if (bird && bird.sound && bird.sound.audioId) {
+                        const audioElement = document.getElementById(bird.sound.audioId);
+
+                        if (audioElement) {
+                            audioElement.pause();
+                            audioElement.currentTime = 0;
+                        }
+                    }
+                });
+            });
+        });
+
+        // ****** ****** ****** ****** ****** ****** ******
+
+
+
+
+
+
+
+        function showStory1() {
+            var s1 = document.getElementById("story-1");
+            if (s1.style.display === "none") {
+                s1.style.display = "block";
+            } else {
+                s1.style.display = "none";
+            }
+        }
+
+        function showStory2() {
+            var s1 = document.getElementById("story-2");
+            if (s1.style.display === "none") {
+                s1.style.display = "block";
+            } else {
+                s1.style.display = "none";
+            }
+        }
+
+
+
+
+        // Function to close the bird info container
+        function closeBirdInfo() {
+            const container = document.getElementById('bird-info-container');
+            if (container) {
+                container.innerHTML = ''; // Clear the content
+                container.removeAttribute('bird-active'); // Remove the active bird attribute
+            }
+        }
+
+        // Attach the close functionality after DOM is fully loaded
+        document.addEventListener('DOMContentLoaded', () => {
+            const closeButton = document.getElementById('close-button');
+            if (closeButton) {
+                closeButton.addEventListener('click', closeBirdInfo);
+            }
+        });
+
+
+    </script>
+
+</body>
+
+</html>

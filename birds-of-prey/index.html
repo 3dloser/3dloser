@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birds of Prey</title>
+    <link rel="stylesheet" href="https://use.typekit.net/pod6wua.css">
+    <link rel="icon" type="image/x-icon" href="assets/SVG/bird_icon.svg">
+
+
+    <style>
+        @font-face {
+            font-family: "HAL Timezone";
+            src:
+                url("assets/fonts/HALTimezoneTest-Regular.otf") format("opentype"),
+        }
+
+        @font-face {
+            font-family: "HAL Timezone Italic";
+            src:
+                url("assets/fonts/HALTimezoneTest-Italic.otf") format("opentype"),
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: #1D1D1D;
+
+        }
+
+
+        .vid-mask {
+            width: 50vw;
+            mask-image: radial-gradient(ellipse 62% 62% at 50% 50%,
+                    /* Oval size and position */
+                    rgba(0, 0, 0, 1) 75%,
+                    /* Solid part inside */
+                    rgba(0, 0, 0, 0) 80%);
+            /* Fuzzy edges */
+            -webkit-mask-image: radial-gradient(ellipse 62% 62% at 50% 50%,
+                    /* For WebKit browsers */
+                    rgba(0, 0, 0, 1) 75%,
+                    rgba(0, 0, 0, 0) 80%);
+        }
+
+        #vid-1 {
+            background-color: #1D1D1D;
+        }
+
+        #intro-title {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            margin-left: 20px;
+            margin-right: 20px;
+
+        }
+
+        #intro-title h1 {
+            text-align: justify;
+            font-family: "neue-haas-unica", sans-serif;
+            color: rgb(192, 190, 190);
+            font-weight: 400;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .intro-text-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-top: 50px;
+            padding: 0 15rem;
+        }
+
+        .intro-text-container p {
+            margin-bottom: 50px;
+        }
+
+        p {
+            color: rgb(192, 190, 190);
+            font-size: 4rem;
+            font-family: 'HAL Timezone', sans-serif;
+            white-space: wrap;
+            text-wrap: wrap;
+            line-height: 1.1;
+            text-align: center;
+            mix-blend-mode: difference;
+            -webkit-font-smoothing: antialiased;
+            justify-self: center;
+        }
+
+        #intro-p1 {
+            position: sticky;
+            top: 50px;
+        }
+
+        #intro-section-1 {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        #line-svg {
+            position: absolute;
+            top: 0px;
+            left: 200px;
+            width: 600px;
+        }
+
+        #intro-map {
+            width: 600px;
+        }
+
+        #intro-section-2 {
+            margin-top: 50px;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        #intro-section-3 {
+            margin-top: 50px;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        #intro-section-4 {
+            margin-top: 50px;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-bottom: 200px;
+        }
+
+        #intro-section-4 img {
+            mix-blend-mode: difference;
+        }
+
+        .intro-footnote {
+            font-size: 2rem;
+            text-align: left;
+            width: 50%;
+        }
+
+
+        #intro-p2 {
+            position: sticky;
+            top: 50px;
+        }
+
+        #intro-p3 {
+            margin-top: 50px;
+            position: sticky;
+            top: 50px;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        #intro-p4 {
+            margin-top: 50px;
+            position: sticky;
+            top: 50px;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        sup {
+            font-size: 2rem;
+        }
+
+        #cta p {
+            font-family: "neue-haas-unica", sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 5px;
+            font-size: 1rem;
+            padding-bottom: 100px;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        @media screen and (max-width: 1400px) {
+            .intro-text-container {
+                padding: 0 12rem;
+            }
+
+            p {
+                font-size: 3rem;
+            }
+
+            sup {
+                font-size: 1.5rem;
+            }
+
+            #line-svg {
+                width: 450px;
+
+            }
+
+            #intro-map {
+                width: 500px;
+            }
+        }
+
+        @media screen and (max-width: 800px) {
+            .intro-text-container {
+                padding: 0 5rem;
+            }
+
+            p {
+                font-size: 2rem;
+            }
+
+            sup {
+                font-size: 1rem;
+            }
+
+            .intro-footnote {
+                font-size: 1.5rem;
+                width: 100%;
+            }
+
+            #line-svg {
+                width: 350px;
+                left: 0;
+            }
+
+            #intro-map {
+                width: 400px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="intro-title">
+        <h1>birds</h1>
+        <h1>of</h1>
+        <h1>prey</h1>
+    </div>
+    <hr>
+    <div class="intro-text-container">
+        <div id="intro-section-1">
+            <div id="intro-p1">
+                <img src="assets/SVG/line.svg" id="line-svg" />
+                <p>Every Spring and Fall, half a billion migratory birds from over 400 species fly through the
+                    skies of Israel and Palestine to traverse between Eurasia and Africa. 
+                </p>
+            </div>
+            <div id="vid-1">
+                <video class="vid-mask" autoplay loop>
+                    <source src="assets/videos/cranes.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </div>
+
+        <div id="intro-section-2">
+            <p id="intro-p2">
+                Being the only land bridge between the three continents, this narrow corridor of air space sees a scale
+                of avian migration unparalleled almost anywhere else.
+            </p>
+
+            <img src="assets/SVG/map_1.svg" id="intro-map" />
+
+        </div>
+
+
+        <div id="intro-section-3">
+            <div id="intro-p3">
+                <p>
+                    Of all the birds migrating through the area, one family is particularly significant—kettles of
+                    eagles, vultures, buzzards that circle and swarm the sky in striking numbers. These large birds are
+                    known as
+                    raptors<sup>1</sup>, or birds of prey. 
+                </p>
+
+                <p class="intro-footnote">1 The term raptor is derived from the Latin word <span
+                        style="font-family: 'HALTimezoneTest-Italic';">rapio</span>, meaning
+                    “to seize or take by force.”</p>
+            </div>
+
+            <img src="assets/SVG/eagle.svg" width="300px" style="position: absolute; left: 30px; bottom: 150px;" />
+            <img src="assets/SVG/bird_2.svg" width="300px" />
+
+
+        </div>
+        <div id="intro-section-4">
+
+            <p id="intro-p4">
+                Increasingly, the sighting of birds of prey here carry with it a precarious fate. These are birds of
+                steel, bearing the shapes of drones, missiles, striker jets. Birdwatching has become not a leisurely
+                activity, but a necessity for survival. Because these birds can take your life.
+            </p>
+
+            <img src="assets/SVG/missile.svg" width="600px" style="position: absolute; left: 0px; bottom: 150px;" />
+            <img src="assets/SVG/jet.svg" width="400px" style="position: absolute; right: 0px; top: 0px;" />
+        </div>
+
+        <div id="cta">
+            <a href="explore.html">
+                <p>click to explore →</p>
+            </a>
+        </div>
+
+
+    </div>
+
+
+</body>
+
+</html>
