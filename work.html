@@ -1,157 +1,217 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<!--title-->
-<title>Tina Zhou</title>
+  <!--title-->
+  <title>Tina Zhou</title>
 
-<!--icon-->
-<link rel="icon" href="images/logo.png">
+  <!--icon-->
+  <link rel="icon" href="images/logo.png">
 
-<!-- stylesheet -->
-<link rel="stylesheet" href="style.css">
+  <!-- stylesheet -->
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@1,300&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Besley:ital,wght@0,400..900;1,400..900&display=swap"
+    rel="stylesheet">
 
 
-<style>
+  <style>
+    p {
+      margin: 0;
+    }
 
-  p {
-    margin: 0;
-  }
+    .header {
+      padding-bottom: 2%;
+    }
 
-  .header {
-    padding-bottom: 2%;
-  }
+    .item p {
+      padding-bottom: 2%;
+      padding-top: 0;
+    }
 
-  .item p {
-    padding-bottom: 2%;
-    padding-top: 0;
-  }
+    .item {
+      margin-bottom: 2%;
+      padding-bottom: 0;
+    }
 
-  .item {
-    margin-bottom: 2%;
-    padding-bottom: 0;
-  }
+    .item.two-col {
+      display: flex;
+      flex-direction: row;
+      gap: 2%;
+    }
 
-  .row-home {
-  }
-</style>
+    .item.item-sm {
+      width: 50%;
+      margin-bottom: 0;
+    }
+
+    .italic {
+      /* font-family: 'Newsreader', serif;
+      font-style: italic;
+      font-weight: 300; */
+      font-size: 0.9rem;
+      opacity: 0.3;
+    }
+  </style>
 </head>
 
 <body class="page-container">
 
-<!--  nav  -->
-<div >
-<ul class="header" style="list-style: none; font-size: 0.5rem;">
-  <li><a href="contact.html"><span class="word">Contact</span></a></li>
-  <li><a href="about.html"><span class="word">About</span></a></li>
-  <li><a href="work.html"><span class="word">Work</span></a></li>
-  <li style="float:left"><a href="index.html"><span class="word" style="padding-left: 0;">Tina &#8287 Zhou</span></a></li>
-</ul>
-</div>
+  <!--  nav  -->
+  <div>
+    <ul class="header" style="list-style: none; font-size: 0.5rem;">
+      <li><a href="contact.html"><span class="word">Contact</span></a></li>
+      <li><a href="about.html"><span class="word">About</span></a></li>
+      <li><a href="work.html"><span class="word">Work</span></a></li>
+      <li style="float:left"><a href="index.html"><span class="word" style="padding-left: 0;">Tina &#8287
+            Zhou</span></a></li>
+    </ul>
+  </div>
 
-<!--  body  -->
+  <!--  body  -->
 
-<!-- <label class="switch">
+  <!-- <label class="switch">
   <input type="checkbox" checked>
   <span class="slider round"></span>
 </label>
 <div style="position: relative; height: 50px;"></div> -->
 
-<div class="row-home">
+  <div class="row-home">
 
-  <!--  column 1  -->
-  <div class="column-home" style="padding-right: 0.7%;">
+    <!--  column 1  -->
+    <div class="column-home" style="padding-right: 0.7%;">
+
+      <div class="item">
+        <a href="https://www.nytimes.com/interactive/2025/world/year-in-pictures.html" target="_blank">
+          <!-- <img width="100%" src="images/design/MadeHere/MadeHere_Hero_2.png" /> -->
+          <video width="100%" autoplay loop muted>
+            <source src="images/design/NYT/YIP.mp4" type="video/mp4">
+          </video>
+          <p class="caption">The Year in Pictures <span class="italic">Interactive Story for The New York Times</span>
+          </p>
+        </a>
+      </div>
+
+      <div class="item two-col">
+        <div class="item item-sm">
+          <a href="https://www.nytimes.com/interactive/2025/10/06/dining/how-to-open-restaurant-nyc.html" target="_blank">
+            <!-- <img width="100%" src="images/design/MadeHere/MadeHere_Hero_2.png" /> -->
+            <video width="100%" autoplay loop muted>
+              <source src="images/design/NYT/how-to.mp4" type="video/mp4">
+            </video>
+            <p class="caption">How to Open a Restaurant in NYC <span class="italic">Interactive Story for The New York
+                Times</span></p>
+          </a>
+        </div>
+        <div class="item item-sm">
+          <a href="https://www.nytimes.com/interactive/2026/travel/places-to-travel-destinations-2026.html" target="_blank">
+            <!-- <img width="100%" src="images/design/MadeHere/MadeHere_Hero_2.png" /> -->
+            <video width="100%" autoplay loop muted>
+              <source src="images/design/NYT/52Places.mp4" type="video/mp4">
+            </video>
+            <p class="caption">52 Places to Go in 2026 <br><span class="italic">Interactive Story for The New York
+                Times</span></p>
+          </a>
+        </div>
+      </div>
+
+      <div class="item">
+        <a href="pages/Salmon-Instructions.html">
+          <img width="100%" src="images/design/Salmon/salmon.gif" />
+          <p class="caption">Salmon Instructions <span class="italic">Information Design</span></p>
+        </a>
+      </div>
 
 
-    <div class="item">
-      <a href="pages/Made-Here.html">
-      <img width="100%" src="images/design/MadeHere/MadeHere_Hero_2.png"/>
-      <p class="caption">Made Here · <span class="italic">Book Design</span></p>
-    </a>
-    </div>
+      <div class="item">
+        <a href="pages/birds-of-prey-book.html">
+          <img width="100%" src="images/design/birds-of-prey/book/birds-of-prey-book-cover.gif" />
+          <p class="caption">Field Guide to Birds of Prey of Gaza Strip <span class="italic">Book</span></p>
+        </a>
+      </div>
 
-    <div class="item">
-      <a href="pages/birds-of-prey-book.html">
-      <img width="100%" src="images/design/birds-of-prey/book/birds-of-prey-book-cover.gif"/>
-      <p class="caption">Field Guide to Birds of Prey of Gaza Strip · <span class="italic">Book Design</span></p>
-    </a>
-    </div>
-
-    <div class="item">
+      <!-- <div class="item">
       <a href="https://risdmuseum.org/art-french-wallpaper-design/explore-collection">
       <img width="100%" src="images/design/risd-museum/museum-explore.gif"/>
       <p class="caption">The Art of French Wallpaper · <span class="italic">Digital Exhibition</span></p>
     </a>
-    </div>
+    </div> -->
 
-    <div class="item">
-      <a href="pages/Salmon-Instructions.html">
-      <img width="100%" src="images/design/Salmon/salmon.gif"/>
-      <p class="caption">Salmon Instructions · <span class="italic">Information Design</span></p>
-    </a>
-    </div>
 
-    <div class="item">
+
+      <!-- <div class="item">
       <a href="https://www.codastory.com/stayonthestory/the-super-rich-and-their-secret-worlds/" target="_blank">
       <img width="100%" src="images/illustration/coda-story/coda-story-cover.gif"/>
       <p class="caption">Coda Story · <span class="italic">Editorial Illustration</span></p>
     </a>
-    </div>
+    </div> -->
 
-    <div class="item">
-      <a href="pages/Tongariro.html">
-      <img width="100%" src="images/design/Tongariro/Tongariro-hero.png"/>
-      <p class="caption">Tongariro National Park · <span class="italic">Branding</span></p>
-    </a>
-    </div>
 
-        <div class="item">
-      <a href="pages/Atlas.html">
-      <img width="100%" src="images/design/Atlas/Atlas.gif"/>
-      <p class="caption">Atlas · <span class="italic">Publication Design</span></p>
-    </a>
-    </div>
 
-    <div class="item">
-      <a href="pages/Letter.html">
-      <img width="100%" src="images/design/Chan/Letter.png">
-      <p class="caption">Letter · <span class="italic">Graphic Design</span></p>
-      </a>
-    </div>
+      <div class="item">
+        <a href="pages/Atlas.html">
+          <img width="100%" src="images/design/Atlas/Atlas.gif" />
+          <p class="caption">Atlas <span class="italic">Publication</span></p>
+        </a>
+      </div>
 
-    <div class="item">
+      <div class="item">
+        <a href="pages/Letter.html">
+          <img width="100%" src="images/design/Chan/Letter.png">
+          <p class="caption">Letter <span class="italic">Print</span></p>
+        </a>
+      </div>
+
+      <!-- <div class="item">
       <a href="https://www.thenation.com/article/politics/california-politics-harris-walz-trump-vance/" target="_blank">
       <img width="100%" src="images/illustration/the-nation/California-01.png"/>
       <p class="caption">California Explains It All · <span class="italic">Editorial Illustration</span></p>
       </a>
-    </div>
+    </div> -->
 
-    <div class="item">
-      <a href="pages/Dupe.html">
-      <img width="100%" src="images/design/Dupe/Dupe_hero.png"/>
-      <p class="caption">Dupe · <span class="italic">Type Design</span></p>
-      </a>
-    </div>
+      <div class="item">
+        <a href="pages/Dupe.html">
+          <img width="100%" src="images/design/Dupe/Dupe_hero.png" />
+          <p class="caption">Dupe <span class="italic">Type Design</span></p>
+        </a>
+      </div>
 
-    <div class="item">
-      <a href="pages/Sontag.html">
-      <img width="100%" src="images/design/Sontag/Sontag-book_1.png"/>
-      <p class="caption">Regarding the Pain of Others · <span class="italic">Book Design</span></p>
-    </a>
-    </div>
+      <div class="item">
+        <a href="pages/Flying-Nun.html">
+          <img width="100%" src="images/design/FlyingNun/FlyingNun-hero.gif" />
+          <p class="caption">Flying Nun Music Festival <span class="italic">Identity</span></p>
+        </a>
+      </div>
+
+      <div class="item">
+        <a href="pages/Sontag.html">
+          <img width="100%" src="images/design/Sontag/Sontag-book_1.png" />
+          <p class="caption">Regarding the Pain of Others <span class="italic">Book</span></p>
+        </a>
+      </div>
 
 
-    <div class="item">
-      <a href="pages/RISDposters.html">
-      <img width="100%" src="images/design/RISDposters/walls_2.png"/>
-      <p class="caption">Walls to Live Beside, Rooms to Own · <span class="italic">Poster Design</span></p>
-    </a>
-    </div>
+      <div class="item">
+        <a href="pages/RISDposters.html">
+          <img width="100%" src="images/design/RISDposters/walls_2.png" />
+          <p class="caption">Walls to Live Beside, Rooms to Own <span class="italic">Poster</span></p>
+        </a>
+      </div>
 
-    <!-- <div class="item">
+      <!-- <div class="item">
+        <a href="pages/Tongariro.html">
+          <img width="100%" src="images/design/Tongariro/Tongariro-hero.png" />
+          <p class="caption">Tongariro National Park · <span class="italic">Branding</span></p>
+        </a>
+      </div> -->
+
+      <!-- <div class="item">
       <a href="pages/SCL-TYCard.html">
       <img width="100%" src="images/design/SCL Zine/SCL_ThankYouCard_cover.jpg"/>
       <p class="caption">Send Chinatown Love thank you card · <span class="italic">Illustration</span></p>
@@ -161,91 +221,105 @@
 
 
 
-  </div>
+    </div>
 
-  <!--  column 2  -->
+    <!--  column 2  -->
 
-  <div class="column-home" style="padding-left: 0.7%;">
-    <div class="column-home" style="padding-right: 0.7%;">
+    <div class="column-home" style="padding-left: 0.7%;">
+      <div class="column-home" style="padding-right: 0.7%;">
 
-      <div class="item">
-        <a href="pages/Vibrations/index.html">
-        <img width="100%" src="images/design/vibrations/vibrations.gif"/>
-        <p class="caption">Vibrations · <span class="italic">Web and Type Design</span></p>
-      </a>
-      </div>
+           <div class="item">
+            <a href="pages/Thesis.html">
+            <img width="100%" src="images/design/Thesis/thesis-hero.png" />
+            <p class="caption">Modes of Seeing, Means of Telling <span class="italic">Book</span></p>
+          </a>
+        </div>
 
-      <div class="item">
-        <a href="https://3dloser.github.io/birds-of-prey/">
-        <img width="100%" src="images/design/birds-of-prey/birds-of-prey-cover.gif"/>
-        <p class="caption">Birds of Prey (Work in Progress) · <span class="italic">Web Design</span></p>
-      </a>
-      </div>
-
-      <div class="item">
-        <a href="pages/Spring-Speakers-24.html">
-        <img width="100%" src="images/design/SSS24/hero.gif"/>
-        <p class="caption">RISD Spring Speaker Series · <span class="italic">Identity Design</span></p>
-      </a>
-      </div>
-
-      <div class="item">
-        <a href="pages/Turkiye-infographic.html">
-        <img width="100%" src="images/design/Turkiye/Turkiye_Scroll.gif"/>
-        <p class="caption">Türkiye · <span class="italic">Information Design</span></p>
-      </a>
-      </div>
-
-      <div class="item">
-        <a href="pages/House-of-Providence.html">
-        <img width="100%" src="images/design/House/TZ_House-Rotate-sm.gif"/>
-        <p class="caption">House of Providence · <span class="italic">Installation</span></p>
-      </a>
-      </div>
-
-      <div class="item">
-        <a href="pages/Chan-Dar-Chee.html">
-        <img width="100%" src="images/design/Chan/Farmers.gif"/>
-        <p class="caption">Chan Dar Chee · <span class="italic">Editorial Design</span></p>
-      </a>
-      </div>
-
-      <div class="item">
-        <a href="pages/Kiwiana.html">
-        <img width="100%" src="images/design/Kiwiana/kiwiana_hero.gif"/>
-        <p class="caption">Place (Something is Happening Here) · <span class="italic">Editorial Design</span></p>
-      </a>
-      </div>
-
-      <div class="item">
-        <a href="pages/Flying-Nun.html">
-        <img width="100%" src="images/design/FlyingNun/FlyingNun-hero.gif"/>
-        <p class="caption">Flying Nun Music Festival · <span class="italic">Identity Design</span></p>
-      </a>
-      </div>
 
         <div class="item">
-      <a href="pages/BirdsofAotearoa.html">
-      <img width="100%" src="images/design/BirdsofAotearoa/Birds_Hero.gif"/>
-      <p class="caption">Birds of Aotearoa · <span class="italic">Illustration & Silkscreen Prints</span></p>
-    </a>
-    </div>
+          <a href="pages/Made-Here.html">
+            <img width="100%" src="images/design/MadeHere/MadeHere_Hero_2.png" />
+            <p class="caption">Made Here <span class="italic">Book</span></p>
+          </a>
+        </div>
 
-      <div class="item">
-        <a href="pages/Whatsinaname.html">
-          <img width="100%" src="images/design/WhatsInAName/Hero_Sm.gif"/>
-          <p class="caption">What's in a Name · <span class="italic">Editorial Design</span></p>
-      </a>
-    </div>
+        <div class="item">
+          <a href="pages/Chan-Dar-Chee.html">
+            <img width="100%" src="images/design/Chan/Farmers.gif" />
+            <p class="caption">Chan Dar Chee <span class="italic">Publication</span></p>
+          </a>
+        </div>
 
-    <div class="item">
-      <a href="pages/SCL-zine.html">
-        <img width="100%" src="images/design/SCL Zine/zine-cover.jpg" type="video/mp4"/>
-        <p class="caption">Send Chinatown Love Zine · <span class="italic">Art Direction & Design</span></p>
-    </a>
-  </div>
+        <div class="item">
+          <a href="pages/Vibrations/index.html">
+            <img width="100%" src="images/design/vibrations/vibrations.gif" />
+            <p class="caption">Vibrations <span class="italic">Web and Type Design</span></p>
+          </a>
+        </div>
 
-    <!-- <div class="item">
+        <!-- <div class="item">
+          <a href="https://3dloser.github.io/birds-of-prey/">
+            <img width="100%" src="images/design/birds-of-prey/birds-of-prey-cover.gif" />
+            <p class="caption">Birds of Prey (Work in Progress) <span class="italic">Web Design</span></p>
+          </a>
+        </div> -->
+
+        <div class="item">
+          <a href="pages/Spring-Speakers-24.html">
+            <img width="100%" src="images/design/SSS24/hero.gif" />
+            <p class="caption">RISD Spring Speaker Series <span class="italic">Identity</span></p>
+          </a>
+        </div>
+
+        <div class="item">
+          <a href="pages/Turkiye-infographic.html">
+            <img width="100%" src="images/design/Turkiye/Turkiye_Scroll.gif" />
+            <p class="caption">Türkiye <span class="italic">Information Design</span></p>
+          </a>
+        </div>
+
+        <div class="item">
+          <a href="pages/House-of-Providence.html">
+            <img width="100%" src="images/design/House/TZ_House-Rotate-sm.gif" />
+            <p class="caption">House of Providence <span class="italic">Installation</span></p>
+          </a>
+        </div>
+
+
+
+        <div class="item">
+          <a href="pages/Kiwiana.html">
+            <img width="100%" src="images/design/Kiwiana/kiwiana_hero.gif" />
+            <p class="caption">Place (Something is Happening Here) <span class="italic">Editorial</span></p>
+          </a>
+        </div>
+
+
+
+        <div class="item">
+          <a href="pages/BirdsofAotearoa.html">
+            <img width="100%" src="images/design/BirdsofAotearoa/Birds_Hero.gif" />
+            <p class="caption">Birds of Aotearoa <span class="italic">Illustration & Silkscreen Prints</span></p>
+          </a>
+        </div>
+
+        <div class="item">
+          <a href="pages/Whatsinaname.html">
+            <img width="100%" src="images/design/WhatsInAName/Hero_Sm.gif" />
+            <p class="caption">What's in a Name <span class="italic">Publication</span></p>
+          </a>
+        </div>
+
+        <div class="item">
+          <a href="pages/SCL-zine.html">
+            <img width="100%" src="images/design/SCL Zine/zine-cover.jpg" type="video/mp4" />
+            <p class="caption">Send Chinatown Love Zine <span class="italic">Art Direction & Design</span></p>
+          </a>
+        </div>
+
+
+
+        <!-- <div class="item">
       <a href="pages/Instabot.html">
       <img width="100%" src="images/illustration/bots1.gif"/>
       <p class="caption">Instabot · <span class="italic">Illustration & Animation</span></p>
@@ -253,8 +327,8 @@
     </div> -->
 
 
-  </div>
-</div>
+      </div>
+    </div>
 </body>
 
 <!--  letters tilt  -->

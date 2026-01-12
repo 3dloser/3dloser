@@ -1,78 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-	
-<!--title-->
-<title>Tina Zhou</title>
-	
-<!--icon-->
-<link rel="icon" href="images/logo.png">
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-<!-- stylesheet -->
-<link rel="stylesheet" href="style.css">
+	<!--title-->
+	<title>Tina Zhou</title>
 
-<style>
-	
-	.text-link {
-		text-decoration: underline;
-		color: #40BE14;
-	}
-	
-	a.text-link, a.text-link:hover, a.text-link:visited {
-		text-decoration: underline;
-		color: #40BE14;
-	}
-	
-	#list {
-		list-style-type: circle;
-		font-size: 1.8rem;
-		margin-left: 7%;
-	}
+	<!--icon-->
+	<link rel="icon" href="images/logo.png">
 
-	#contact {
-		margin-top: 5%;
-	}
-	
-</style>
+	<!-- stylesheet -->
+	<link rel="stylesheet" href="style.css">
+
+	<style>
+		.text-link {
+			text-decoration: underline;
+			color: #40BE14;
+		}
+
+		a.text-link,
+		a.text-link:hover,
+		a.text-link:visited {
+			text-decoration: underline;
+			color: #40BE14;
+		}
+
+		#list {
+			list-style-type: none;
+			list-style-position: outside;
+			font-size: 1.5rem;
+			max-width: 600px;
+			padding-left: 1.5em;
+		}
+
+		#list li::before {
+			content: "+ ";
+			margin-left: -1.5em;
+			padding-right: 0.5em;
+		}
+
+		#list li {
+			margin-bottom: 5px;
+		}
+
+		#contact {
+			margin-top: 20px;
+			max-width: 600px;
+		}
+
+		#list {
+			font-size: 1.5rem;
+
+		}
+
+		@media screen and (max-width: 600px) {
+
+		}
+	</style>
 </head>
-	
+
 <body class="page-container">
 
 	<!--  nav  -->
 	<ul class="header" style="list-style: none; font-size: 0.5rem;">
-	  <li><a href="contact.html"><span class="word">Contact</span></a></li>
-	  <li><a href="about.html"><span class="word">About</span></a></li>
-	  <li><a href="work.html"><span class="word">Work</span></a></li>
-	  <li style="float:left"><a href="index.html"><span class="word" style="padding-left: 0;">Tina &#8287 Zhou</span></a></li>
+		<li><a href="contact.html"><span class="word">Contact</span></a></li>
+		<li><a href="about.html"><span class="word">About</span></a></li>
+		<li><a href="work.html"><span class="word">Work</span></a></li>
+		<li style="float:left"><a href="index.html"><span class="word" style="padding-left: 0;">Tina &#8287
+					Zhou</span></a></li>
 	</ul>
 
-    <p id="contact" style="margin-bottom: 2%;">
-		Here are some things we could talk about should you wish to contact me. 
-		
-		<ul id="list">
-			<li>• My work</li>
-			<li>• My greatest strengths and weaknesses, how I handle conflict, and where I see myself
-				in the next five to ten years
-			</li>
-			<li>• The one time I finished a NYT mini crossword puzzle under thirty seconds (I don't have a screenshot 
-				but it happened I swear)
-			</li>
-			<li>• Birds</li>
-			<li>• How to make the perfect roasted peking duck at home under 12 hours (I have devoted an unreasonable amount of time to this cause)</li>
-			<li>• Orange cats</li>
-			<li>• Honestly anything I'm a pretty good listener</li>
-		</ul>
-		
+	<p id="contact">
+		Here are some things we could talk about should you wish to contact me.
+
+	<ul id="list">
+		<li>My work</li>
+		<li>My greatest strengths and weaknesses, how I handle conflict, and where I see myself
+			in the next five to ten years
+		</li>
+		<li>The one time I finished a NYT mini crossword puzzle under thirty seconds (I don't have a screenshot
+			but it happened I swear)
+		</li>
+		<li>Birds</li>
+		<li>How to make the perfect roasted peking duck at home under 12 hours (I have devoted an unreasonable amount of
+			time to this cause)</li>
+		<li>Orange cats</li>
+		<li>Honestly anything I'm a pretty good listener</li>
+	</ul>
+
 	<p style="text-align: left;">
-		You can email me <a href="mailto:tzhou01@risd.edu" class="text-link">here</a>!
+		You can email me <a href="mailto:tinazhou.works@gmail.com" class="text-link">here</a>!
 	</p>
 
 </body>
-    
-    <!--  letters tilt  -->
+
+<!--  letters tilt  -->
 <script src="other.js"></script>
-    
+
 </html>
