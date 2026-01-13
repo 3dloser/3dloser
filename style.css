@@ -34,13 +34,13 @@
 }
 
 body {
-	font-family: 'Neue Haas Grotesk';
-	background-color: white;
-	}
+  font-family: 'Neue Haas Grotesk';
+  background-color: white;
+}
 
-  .italic {
-    font-family: 'Neue Haas Grotesk Italic';
-  }
+.italic {
+  font-family: 'Neue Haas Grotesk Italic';
+}
 
 html {
   cursor: url('cursor.svg'), auto;
@@ -61,30 +61,31 @@ html {
 
 /*-------------------------------nav header-----------------------------------------*/
 
-    /*------header words tilt effect--------*/
+/*------header words tilt effect--------*/
 .word {
-	font-size: 1.5rem;
+  font-size: 1.5rem;
 }
-.word .up
-{
-	display: inline-block;
-	transform: translate3d(0px, 0px, 0px) rotate(0deg);
-	transition: all 0.2s ease-in-out;
+
+.word .up {
+  display: inline-block;
+  transform: translate3d(0px, 0px, 0px) rotate(0deg);
+  transition: all 0.2s ease-in-out;
 }
-.word .down
-{
-	display: inline-block;
-	transform: translate3d(0px, 0px, 0px) rotate(0deg);
-	transition: all 0.2s ease-in-out;
+
+.word .down {
+  display: inline-block;
+  transform: translate3d(0px, 0px, 0px) rotate(0deg);
+  transition: all 0.2s ease-in-out;
 }
-.word:hover .up
-{
-	transform: translate3d(0px, -8px, 0px) rotate(15deg);
-	color: #40BE14;
+
+.word:hover .up {
+  transform: translate3d(0px, -8px, 0px) rotate(15deg);
+  color: #40BE14;
 }
+
 .word:hover .down {
-	transform: translate3d(0px, 8px, 0px) rotate(-15deg);
-	color: #40BE14;
+  transform: translate3d(0px, 8px, 0px) rotate(-15deg);
+  color: #40BE14;
 }
 
 /*------------------nav bar------------------*/
@@ -113,35 +114,34 @@ ul {
   padding-left: 0px;
 }
 
-.header {
-
-}
+.header {}
 
 /* stack links on top of each other when the screen < 500px */
-@media screen and (max-width: 500px) {
+/* @media screen and (max-width: 500px) {
   .header li {
     float: left;
     display: block;
     text-align: left;
   }
 
-}
-/*end media query*/
+} */
+
 
 
 a {
-	color:#000000;
-	text-decoration: none;
+  color: #000000;
+  text-decoration: none;
 }
 
-a:hover, a:active {
-	color: #40BE14;
+a:hover,
+a:active {
+  color: #40BE14;
   cursor: url('cursor.svg'), auto;
 
 }
 
 a:visited {
-	color: #333333;
+  color: #333333;
 }
 
 #nz img {
@@ -161,19 +161,19 @@ a:visited {
 }
 
 p {
-	font-size: 1.5rem;
-	color: black;
-	display: inline-block;
+  font-size: 1.5rem;
+  color: black;
+  display: inline-block;
 }
 
 /*---------------------------------------home page-----------------------------------------*/
-  .row-home {
-    display: flex;
-  }
+.row-home {
+  display: flex;
+}
 
-  .column-home {
-    flex: 50%;
-  }
+.column-home {
+  flex: 50%;
+}
 
 
 
@@ -219,15 +219,15 @@ label {
   transition: .4s;
 }
 
-input:checked + .slider {
+input:checked+.slider {
   background-color: #40BE14;
 }
 
-input:focus + .slider {
+input:focus+.slider {
   box-shadow: 0 0 1px #40BE14;
 }
 
-input:checked + .slider:before {
+input:checked+.slider:before {
   -webkit-transform: translateX(26px);
   -ms-transform: translateX(26px);
   transform: translateX(26px);
@@ -257,35 +257,39 @@ input:checked + .slider:before {
 
 /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
 @media screen and (max-width: 600px) {
-    .column-home {
-      width: 100%;
-    }
-    .row-home {
-      display:initial;
-    }
+  .column-home {
+    width: 100%;
+  }
+
+  .row-home {
+    display: initial;
+  }
 }
 
 footer {
-	color: #333333;
-	font-size: 0.5em;
-	text-align: center;
-	position: fixed;
-	left:30%;
-	bottom: 3%;
+  color: #333333;
+  font-size: 0.5em;
+  text-align: center;
+  position: fixed;
+  left: 30%;
+  bottom: 3%;
 }
 
 /*---------------------------------------about-----------------------------------------*/
 
 .row {
-  display: -ms-flexbox; /* IE10 */
+  display: -ms-flexbox;
+  /* IE10 */
   display: flex;
-  -ms-flex-wrap: wrap; /* IE10 */
+  -ms-flex-wrap: wrap;
+  /* IE10 */
   flex-wrap: wrap;
   padding: 0 5%;
 }
 
 .column {
-  -ms-flex: 24%; /* IE10 */
+  -ms-flex: 24%;
+  /* IE10 */
   flex: 24%;
   width: 24%;
   padding: 0 4px;
@@ -297,8 +301,9 @@ footer {
     width: 100%;
     max-width: 100%;
   }
+
   .row {
-    display:initial;
+    display: initial;
   }
 }
 
@@ -308,7 +313,7 @@ footer {
 
 #bread:hover img {
   display: block;
-  float:right;
+  float: right;
 }
 
 #movies-pic {
@@ -317,7 +322,7 @@ footer {
 
 #movies:hover img {
   display: block;
-  float:left;
+  float: left;
 }
 
 #music-pic {
@@ -326,7 +331,7 @@ footer {
 
 #music:hover img {
   display: block;
-  float:right;
+  float: right;
 }
 
 /*---------------------------------------individual works-----------------------------------------*/
@@ -409,7 +414,7 @@ h2 {
 }
 
 .left-about {
-  width:35%;
+  width: 35%;
   text-align: center;
 }
 
@@ -436,7 +441,7 @@ h2 {
 }
 
 .left-about-pic {
-  width:35%;
+  width: 35%;
 }
 
 .right-about-pic {
@@ -460,5 +465,23 @@ h2 {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  margin-top: .3%;
+  margin-top: 6px;
+  gap: 10px;
+}
+
+@media screen and (max-width: 500px) {
+  .word {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 340px) {
+  .header {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .header li a {
+    padding: 0;
+  }
 }
