@@ -32,8 +32,8 @@
           element: element,
           x: Math.random() * (window.innerWidth - 400) + 100,
           y: Math.random() * (window.innerHeight - 200) + 100,
-          vx: (Math.random() * 0.3 + 0.09) * (Math.random() > 0.5 ? 1 : -1),
-          vy: (Math.random() * 0.3 + 0.09) * (Math.random() > 0.5 ? 1 : -1),
+          vx: (Math.random() * 0.5 + 0.1) * (Math.random() > 0.5 ? 1 : -1),
+          vy: (Math.random() * 0.5 + 0.1) * (Math.random() > 0.5 ? 1 : -1),
           width: 0,
           height: 0
         });
@@ -70,6 +70,51 @@
           item.element.style.left = item.x + 'px';
           item.element.style.top = item.y + 'px';
         });
+
+        // check for collisions between text blocks
+        for (let i = 0; i < floatingElements.length; i++) {
+          for (let j = i + 1; j < floatingElements.length; j++) {
+            let item1 = floatingElements[i];
+            let item2 = floatingElements[j];
+
+            // check if rectangles overlap
+            if (item1.x < item2.x + item2.width &&
+                item1.x + item1.width > item2.x &&
+                item1.y < item2.y + item2.height &&
+                item1.y + item1.height > item2.y) {
+
+              // if about to collide, swap velocities
+              let tempVx = item1.vx;
+              let tempVy = item1.vy;
+              item1.vx = item2.vx;
+              item1.vy = item2.vy;
+              item2.vx = tempVx;
+              item2.vy = tempVy;
+
+              // separate a bit
+              let overlapX = (item1.width + item2.width) / 2 - Math.abs((item1.x + item1.width / 2) - (item2.x + item2.width / 2));
+              let overlapY = (item1.height + item2.height) / 2 - Math.abs((item1.y + item1.height / 2) - (item2.y + item2.height / 2));
+
+              if (overlapX < overlapY) {
+                if (item1.x < item2.x) {
+                  item1.x -= overlapX / 2;
+                  item2.x += overlapX / 2;
+                } else {
+                  item1.x += overlapX / 2;
+                  item2.x -= overlapX / 2;
+                }
+              } else {
+                if (item1.y < item2.y) {
+                  item1.y -= overlapY / 2;
+                  item2.y += overlapY / 2;
+                } else {
+                  item1.y += overlapY / 2;
+                  item2.y -= overlapY / 2;
+                }
+              }
+            }
+          }
+        }
 
         requestAnimationFrame(animate);
       }
